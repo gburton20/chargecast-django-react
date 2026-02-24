@@ -3,7 +3,7 @@ from __future__ import annotations
 from django.db import models
 
 
-def normalize_postcode(value: str | None) -> str | None:
+def normalise_postcode(value: str | None) -> str | None:
     if value is None:
         return None
     return "".join(value.split()).upper()
@@ -38,7 +38,7 @@ class PostcodeRegionCache(models.Model):
     resolved_at = models.DateTimeField(auto_now=True, db_index=True)
 
     def save(self, *args, **kwargs):
-        self.postcode = normalize_postcode(self.postcode)
+        self.postcode = normalise_postcode(self.postcode)
         super().save(*args, **kwargs)
 
     def __str__(self) -> str:  # pragma: no cover
@@ -59,11 +59,11 @@ class ChargerLocation(models.Model):
     class Meta:
         indexes = [
             models.Index(fields=["latitude", "longitude"], name="core_charger_lat_lng_idx"),
-            models.Index(fields=["region_id", "postcode"], name="core_charger_region_postcode_idx"),
+            models.Index(fields=["region_id", "postcode"], name="core_charger_reg_pcode_idx"),
         ]
 
     def save(self, *args, **kwargs):
-        self.postcode = normalize_postcode(self.postcode)
+        self.postcode = normalise_postcode(self.postcode)
         super().save(*args, **kwargs)
 
     def __str__(self) -> str:  # pragma: no cover

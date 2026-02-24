@@ -28,3 +28,16 @@ source venv/bin/activate
 Ensure VS Code is using the backend virtual environment interpreter:
 
 Python: Select Interpreter → `backend/venv/bin/python`
+
+# Testing
+
+Run the Django test suite for the `core` app:
+
+```bash
+cd backend
+python manage.py test core --keepdb --noinput
+```
+
+Notes:
+- `--keepdb` avoids dropping/recreating the test database (useful with Supabase session pooler connections).
+- `--noinput` prevents interactive prompts during the test run.
