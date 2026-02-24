@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from django.db import models
 
-
+# Helper function to standardise the format of postcodes input by the user to a capitalised postcode with no whitespace between letters. The returned value from this function can then be sent to the NESO Carbon Intensity API
 def normalise_postcode(value: str | None) -> str | None:
     if value is None:
         return None
