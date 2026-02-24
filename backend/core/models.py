@@ -1,35 +1,70 @@
-import datetime
+from __future__ import annotations
 
 from django.db import models
-from django.utils import timezone
 
-# Create your models here.
 
-# Region model:
+def normalize_postcode(value: str | None) -> str | None:
+    if value is None:
+        return None
+    return "".join(value.split()).upper()
+
+
 class Region(models.Model):
-    # UUID from NESO API:
-    region_id = models.TextField
-    # (e.g. 'South Wales')
-    shortname = models.TextField
-    # Full region name:
-    name = models.TextField
+    """Stores DNO region definitions from the NESO API."""
+
+    # UUID (or similar identifier) from NESO API.
+    region_id = models.CharField(max_length=64, unique=True)
+    # Short display name (e.g. "South Wales").
+    shortname = models.CharField(max_length=64, db_index=True)
+    # Full region name.
+    name = models.CharField(max_length=128)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-# PostcodeRegionCache model:
+    def __str__(self) -> str:  # pragma: no cover
+        return f"{self.shortname} ({self.region_id})"
+
+
 class PostcodeRegionCache(models.Model):
-    # Uppercase, stripped:
-    postcode = models.TextField
-    region_id = models.TextField
-    region_shortname = models.TextField
-    resolved_at = models.DateTimeField(auto_now=True)
+    """Caches postcode->region lookups.
 
-# ChargerLocation model:
+    Cache policy: callers should treat entries as stale based on `resolved_at`.
+    """
+
+    # Uppercase, whitespace-stripped postcode.
+    postcode = models.CharField(max_length=16, unique=True)
+    region_id = models.CharField(max_length=64, db_index=True)
+    region_shortname = models.CharField(max_length=64)
+    resolved_at = models.DateTimeField(auto_now=True, db_index=True)
+
+    def save(self, *args, **kwargs):
+        self.postcode = normalize_postcode(self.postcode)
+        super().save(*args, **kwargs)
+
+    def __str__(self) -> str:  # pragma: no cover
+        return f"{self.postcode} -> {self.region_shortname}"
+
+
 class ChargerLocation(models.Model):
-    name = models.TextField
-    postcode = models.TextField
-    latitude = models.DecimalField
-    longitude = models.DecimalField
-    region_id = models.TextField
+    """Represents a charging location with a lat/lng point and a resolved region."""
+
+    name = models.CharField(max_length=128)
+    postcode = models.CharField(max_length=16, db_index=True)
+    latitude = models.DecimalField(max_digits=9, decimal_places=6)
+    longitude = models.DecimalField(max_digits=9, decimal_places=6)
+    region_id = models.CharField(max_length=64, db_index=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        indexes = [
+            models.Index(fields=["latitude", "longitude"], name="core_charger_lat_lng_idx"),
+            models.Index(fields=["region_id", "postcode"], name="core_charger_region_postcode_idx"),
+        ]
+
+    def save(self, *args, **kwargs):
+        self.postcode = normalize_postcode(self.postcode)
+        super().save(*args, **kwargs)
+
+    def __str__(self) -> str:  # pragma: no cover
+        return self.name
