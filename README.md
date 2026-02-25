@@ -31,11 +31,11 @@ Python: Select Interpreter → `backend/venv/bin/python`
 
 # Testing
 
-Run the Django test suite for the `core` app:
+Run the Django test suite for the `core`, `carbon` and `fleet` apps:
 
 ```bash
 cd backend
-python manage.py test core --keepdb --noinput
+python manage.py test '${app_name}' --keepdb --noinput
 ```
 
 Notes:
