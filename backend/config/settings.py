@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'core',
     'carbon',
     'fleet',
-
 ]
 
 MIDDLEWARE = [
