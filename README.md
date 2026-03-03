@@ -35,7 +35,7 @@ Run the Django test suite for the `core`, `carbon` and `fleet` apps:
 
 ```bash
 cd backend
-python manage.py test '${app_name}' --keepdb --noinput
+python manage.py test app_1_name app_2_name app_3_name --keepdb --noinput
 ```
 
 Notes:

@@ -40,6 +40,9 @@ class FleetUploadBatch(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self) -> str:  # pragma: no cover
+        return f"{self.filename} ({self.processing_status})"
+
 class FleetChargingEvent(models.Model):
     """Append-only charging event ledger.
 
@@ -73,6 +76,9 @@ class FleetChargingEvent(models.Model):
         help_text="kgCO₂",
     )
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self) -> str:  # pragma: no cover
+        return f"{self.vehicle_id} @ {self.charged_at.isoformat()}"
 
     def save(self, *args, **kwargs):
         if not self._state.adding:

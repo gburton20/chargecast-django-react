@@ -3,11 +3,11 @@ from django.core.exceptions import ValidationError
 from decimal import Decimal
 from core.models import Region, PostcodeRegionCache, ChargerLocation
 
-# Create your tests here per model:
-
 # Region model's tests:
 
 # Region's field validation tests:
+
+# Validates the Region schema so only data that fits the model contract can be saved:
 class RegionValidationTests(TestCase):
     def test_blank_required_fields_raise_validation_error(self):
         invalid_instance = Region(region_id="", shortname="", name="")
@@ -50,6 +50,8 @@ class RegionValidationTests(TestCase):
         self.assertEqual(Region.objects.count(), 1)
 
 # Region's index presence tests:
+
+# Checks field-level constraints on the Region model; i) region_id is unique, ii) shortname is indexed
 class RegionIndexTests(TestCase):
     def test_region_id_is_unique(self):
         region_id_field = Region._meta.get_field("region_id")
@@ -59,10 +61,18 @@ class RegionIndexTests(TestCase):
         shortname_field = Region._meta.get_field("shortname")
         self.assertTrue(shortname_field.db_index)
 
+# Confirms the .__str__() method returns the expected human-readable string:
+class RegionStrTests(TestCase):
+    def test_region_str_includes_shortname_and_region_id(self):
+        region = Region.objects.create(region_id="REG-1", shortname="South", name="South Region")
+        self.assertEqual(str(region), "South (REG-1)")
+
 
 # PostcodeRegionCache models' tests:
 
 # PostcodeRegionCache's field validation tests:
+
+# Validates the schema rules for cache rows (required/non-blank, max length, uniqueness on postcode)
 class PostcodeRegionCacheValidationTests(TestCase):
     def test_blank_required_fields_raise_validation_error(self):
         invalid_instance = PostcodeRegionCache(postcode="", region_id="", region_shortname="")
@@ -117,6 +127,7 @@ class PostcodeRegionCacheValidationTests(TestCase):
         self.assertEqual(PostcodeRegionCache.objects.count(), 1)
 
 # PostcodeRegionCache's index presence tests:
+# Checks field-level indexing/constraints:
 class PostcodeRegionCacheIndexTests(TestCase):
     def test_postcode_is_unique(self):
         postcode_field = PostcodeRegionCache._meta.get_field("postcode")
@@ -130,10 +141,33 @@ class PostcodeRegionCacheIndexTests(TestCase):
         resolved_at_field = PostcodeRegionCache._meta.get_field("resolved_at")
         self.assertTrue(resolved_at_field.db_index)
 
+# Verifies the model's save(), normalises the postcode (stripping of whitespace and uppercase) so stored cache keys are consistent
+class PostcodeRegionCacheSaveNormalisationTests(TestCase):
+    def test_postcode_is_normalised_on_save(self):
+        cache = PostcodeRegionCache.objects.create(
+            postcode=" sw1a  1aa ",
+            region_id="REG-1",
+            region_shortname="South",
+        )
+        cache.refresh_from_db()
+        self.assertEqual(cache.postcode, "SW1A1AA")
+
+# Verifies the cache rows' __str__() format is readable
+class PostcodeRegionCacheStrTests(TestCase):
+    def test_cache_str_is_readable_mapping(self):
+        cache = PostcodeRegionCache.objects.create(
+            postcode="SW1A1AA",
+            region_id="REG-1",
+            region_shortname="South",
+        )
+        self.assertEqual(str(cache), "SW1A1AA -> South")
+
 
 # ChargerLocation model's tests:
 
 # ChargerLocation's field validation tests:
+
+# Validates schema rules (required fields, max length, decimal precision/range via DecimalField validation)
 class ChargerLocationValidationTests(TestCase):
     def test_blank_required_fields_raise_validation_error(self):
         invalid_instance = ChargerLocation(
@@ -197,6 +231,8 @@ class ChargerLocationValidationTests(TestCase):
         self.assertEqual(ChargerLocation.objects.count(), 1)
 
 # ChargerLocation's index presence tests:
+
+# Verifies field-level indexes exist on postcode and region_id, the names composite Meta.indexes index entries exists (core_charger_lat_lng_idx, core_charger_reg_pcode_idx)
 class ChargerLocationIndexTests(TestCase):
     def test_postcode_and_region_id_fields_are_indexed(self):
         postcode_field = ChargerLocation._meta.get_field("postcode")
@@ -208,3 +244,29 @@ class ChargerLocationIndexTests(TestCase):
         indexes = {(tuple(idx.fields), idx.name) for idx in ChargerLocation._meta.indexes}
         self.assertIn((("latitude", "longitude"), "core_charger_lat_lng_idx"), indexes)
         self.assertIn((("region_id", "postcode"), "core_charger_reg_pcode_idx"), indexes)
+
+# Verifies postcode normalisation on save() for ChargerLocation
+class ChargerLocationSaveNormalisationTests(TestCase):
+    def test_postcode_is_normalised_on_save(self):
+        location = ChargerLocation.objects.create(
+            name="Test Charger",
+            postcode=" sw1a 1aa ",
+            latitude=Decimal("51.501000"),
+            longitude=Decimal("-0.141000"),
+            region_id="REG-1",
+        )
+        location.refresh_from_db()
+        self.assertEqual(location.postcode, "SW1A1AA")
+
+
+# Verifies ChargerLocation.__str__() returns the charger name value
+class ChargerLocationStrTests(TestCase):
+    def test_location_str_is_name(self):
+        location = ChargerLocation.objects.create(
+            name="Test Charger",
+            postcode="SW1A1AA",
+            latitude=Decimal("51.501000"),
+            longitude=Decimal("-0.141000"),
+            region_id="REG-1",
+        )
+        self.assertEqual(str(location), "Test Charger")

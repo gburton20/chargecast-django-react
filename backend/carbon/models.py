@@ -46,3 +46,7 @@ class CarbonIntensityRecord(models.Model):
             models.Index(fields=["region_id", "valid_from"], name="carbon_cir_region_from_idx"),
             models.Index(fields=["is_national", "valid_from"], name="carbon_cir_nat_from_idx"),
         ]
+
+    def __str__(self) -> str:  # pragma: no cover
+        scope = "National" if self.is_national else (self.region_shortname or self.region_id or "Regional")
+        return f"{scope} {self.valid_from.isoformat()} -> {self.valid_to.isoformat()}"
