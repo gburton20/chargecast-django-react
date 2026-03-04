@@ -7,7 +7,7 @@ from django.utils import timezone
 
 from carbon.models import CarbonIntensityRecord
 
-# Tests to establish whether a national and regional record can be created in the PostgreSQL DB via data sourced from the NESO carbon intensity API.
+# Tests to establish whether a national and regional record can be created in the PostgreSQL DB:
 class CarbonIntensityRecordCreationTests(TestCase):
 	def test_can_create_national_record_with_valid_data(self):
 		valid_from = timezone.make_aware(datetime(2026, 1, 1, 0, 0, 0))
@@ -153,14 +153,14 @@ class CarbonIntensityRecordConstraintTests(TestCase):
 					is_national=False,
 				)
 
-# Tests to ensure expected named indexes are declard on the model (in core/models.py > Meta.indexes) to the DB are created successfully:
+# Checks the expected named indexes (in carbon/models.py > Meta.indexes) are declard on the model:
 class CarbonIntensityRecordIndexTests(TestCase):
 	def test_expected_meta_indexes_exist(self):
 		indexes = {(tuple(idx.fields), idx.name) for idx in CarbonIntensityRecord._meta.indexes}
 		self.assertIn((("region_id", "valid_from"), "carbon_cir_region_from_idx"), indexes)
 		self.assertIn((("is_national", "valid_from"), "carbon_cir_nat_from_idx"), indexes)
 
-# Tests whether the scope and valid from values input by the user are converted to strings successfully for human-readable admin and debugging messages
+# Tests the scope + valid_from values are included in the __str__() output for human-readable admin/debug messages.
 class CarbonIntensityRecordStrTests(TestCase):
 	def test_str_contains_scope_and_valid_from(self):
 		valid_from = timezone.make_aware(datetime(2026, 1, 1, 0, 0, 0))
