@@ -145,3 +145,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# Timeout configuration settings for the regional and national forecast and actual methods:
+NESO_API_TIMEOUT_SECONDS = int(os.getenv("NESO_API_TIMEOUT_SECONDS", 10))
