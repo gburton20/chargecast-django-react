@@ -147,4 +147,6 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 # Timeout configuration settings for the regional and national forecast and actual methods:
-NESO_API_TIMEOUT_SECONDS = int(os.getenv("NESO_API_TIMEOUT_SECONDS", 10))
+NESO_API_TIMEOUT_SECONDS = int(os.getenv("NESO_API_TIMEOUT_SECONDS", "10"))
+NESO_API_MAX_RETRIES = int(os.getenv("NESO_API_MAX_RETRIES", "3"))
+NESO_API_BACKOFF_FACTOR = int(os.getenv("NESO_API_BACKOFF_FACTOR", "2"))
