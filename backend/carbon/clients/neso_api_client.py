@@ -18,6 +18,9 @@ _DEFAULT_HEADERS = {"Accept": "application/json"}
 
 
 def _iso8601_utc_minute_from_now() -> str:
+    """Return the current time as an ISO 8601 UTC minute timestamp.
+
+    Format: YYYY-MM-DDTHH:MMZ (e.g. 2026-03-05T12:34Z). Used to populate the `{from}` path parameter required by the NESO Carbon Intensity API."""
     now = timezone.now()
     if timezone.is_naive(now):
         now = timezone.make_aware(now, dt_timezone.utc)
@@ -27,6 +30,18 @@ def _iso8601_utc_minute_from_now() -> str:
 
 
 def _get_json(url: str) -> dict[str, Any]:
+    """GET a NESO API URL and return parsed JSON.
+
+    Uses `requests.get` with `_DEFAULT_HEADERS` and `NESO_API_TIMEOUT_SECONDS`. Retries transient failures up to `NESO_API_MAX_RETRIES` with exponential backoff based on `NESO_API_BACKOFF_FACTOR` (plus small jitter).
+
+    Returns:
+      - Parsed JSON on success
+      - `{"error": "<message>"}` on failure
+
+    Error handling:
+      - 404: returns a not-found error (no retry)
+      - 429 and 5xx: retry
+      - Most other 4xx: return an error without retry"""
     last_error_message: str | None = None
 
     for attempt in range(NESO_API_MAX_RETRIES + 1):
@@ -59,6 +74,9 @@ def _get_json(url: str) -> dict[str, Any]:
 
 # Get the national carbon intensity forecast for the next 48 hours:
 def get_national_forecast() -> dict[str, Any]:
+    """Fetch the national carbon intensity forecast for the next 48 hours.
+
+    Calls `/intensity/{from}/fw48h` where `{from}` is the current UTC minute."""
     now_str = _iso8601_utc_minute_from_now()
     url = f"{API_BASE_URL}/intensity/{now_str}/fw48h"
     return _get_json(url)
@@ -66,6 +84,9 @@ def get_national_forecast() -> dict[str, Any]:
 
 # Get the regional carbon intensity forecast for all DNO regions for the next 48 hours:
 def get_regional_forecast() -> dict[str, Any]:
+    """Fetch the regional carbon intensity forecast for all DNO regions (48 hours).
+
+    Calls `/regional/intensity/{from}/fw48h` where `{from}` is the current UTC minute."""
     now_str = _iso8601_utc_minute_from_now()
     url = f"{API_BASE_URL}/regional/intensity/{now_str}/fw48h"
     return _get_json(url)
@@ -73,6 +94,9 @@ def get_regional_forecast() -> dict[str, Any]:
 
 # Actual carbon intensity for the past 24 hours:
 def get_national_actual() -> dict[str, Any]:
+    """Fetch national carbon intensity actuals for the past 24 hours.
+
+    Calls `/intensity/{from}/pt24h` where `{from}` is the current UTC minute.'"""
     now_str = _iso8601_utc_minute_from_now()
     url = f"{API_BASE_URL}/intensity/{now_str}/pt24h"
     return _get_json(url)
@@ -80,6 +104,13 @@ def get_national_actual() -> dict[str, Any]:
 
 # Postcode to region method:
 def resolve_postcode_to_region(postcode: str | None) -> dict[str, Any]:
+    """Resolve a UK postcode to a NESO region.
+
+    Extracts the outcode via `extract_outcode(postcode)` and calls
+    `/regional/postcode/{outcode}`.
+
+    Returns `{"error": "Postcode is required"}` if the postcode is missing/invalid.
+    """
     outcode = extract_outcode(postcode)
     if not outcode:
         return {"error": "Postcode is required"}
