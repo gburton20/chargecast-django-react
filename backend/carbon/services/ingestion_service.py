@@ -10,7 +10,6 @@ from carbon.clients.neso_api_client import (
     get_national_actual
 )
 from carbon.models import CarbonIntensityRecord
-from core.models import Region
 
 logger = logging.getLogger(__name__)
 
@@ -39,13 +38,13 @@ def ingest_national_forecast() -> IngestionResult:
     
     if "error" in national_forecast:
         logger.error(f"API error: {national_forecast.get('error')}")
-        result.records_failed = 1
+        result.records_failed += 1
         return result
     
     data = national_forecast.get("data", [])
     if not data:
         logger.warning("No forecast data returned from API")
-        result.records_skipped = 1
+        result.records_skipped += 1
         return result
     
     forecast_generated_at = timezone.now()
@@ -125,13 +124,13 @@ def ingest_regional_forecast() -> IngestionResult:
 
     if "error" in regional_forecast:
         logger.error(f"API error: {regional_forecast.get('error')}")
-        result.records_failed = 1
+        result.records_failed += 1
         return result
     
     data = regional_forecast.get("data", [])
     if not data:
         logger.warning("No forecast data returned from API")
-        result.records_skipped = 1
+        result.records_skipped += 1
         return result
     
     forecast_generated_at = timezone.now()
@@ -149,37 +148,44 @@ def ingest_regional_forecast() -> IngestionResult:
             
             regions = period.get("regions", [])
             # Extract intensity data per region in the regions list:
-            for region in regions:
-                region_id = region.get("regionid")
-                region_shortname = region.get("shortname")
-                intensity = region.get("intensity", {})
-                forecast = intensity.get("forecast")
-                index = intensity.get("index")
+            if not regions:
+                logger.error(f"No regions data returned from get_regional_forecast()")
+                result.records_failed += 1
+            else:
+                for region in regions:
+                    region_id = region.get("regionid")
+                    region_shortname = region.get("shortname")
+                    if region_id is None or not region_shortname:
+                        logger.error(f"Missing region_id or shortname in region: {region}")
+                        result.records_failed += 1
+                        continue
+                    intensity = region.get("intensity", {})
+                    forecast = intensity.get("forecast")
+                    index = intensity.get("index")
 
-                if forecast is None or index is None:
-                    logger.warning(f"Missing intensity data in period {period}")
-                    result.records_failed += 1
-                    continue
+                    if forecast is None or index is None:
+                        logger.warning(f"Missing intensity data in period: {period}, for region: {region_shortname}")
+                        result.records_failed += 1
+                        continue
 
-                # Store in database:
-                _, created = CarbonIntensityRecord.objects.update_or_create(
-                    region_id=region_id,
-                    valid_from=valid_from,
-                    is_national=False,
-                    defaults={
-                        "region_id":region_id,
-                        "region_shortname": region_shortname,
-                        "valid_to": valid_to,
-                        "forecast": forecast,
-                        "index": index,
-                        "forecast_generated_at": forecast_generated_at,
-                    },
-                )
+                    # Store in database:
+                    _, created = CarbonIntensityRecord.objects.update_or_create(
+                        region_id=region_id,
+                        valid_from=valid_from,
+                        is_national=False,
+                        defaults={
+                            "region_shortname": region_shortname,
+                            "valid_to": valid_to,
+                            "forecast": forecast,
+                            "index": index,
+                            "forecast_generated_at": forecast_generated_at,
+                        },
+                    )
 
-                if created:
-                    result.records_created += 1
-                else:
-                    result.records_updated += 1
+                    if created:
+                        result.records_created += 1
+                    else:
+                        result.records_updated += 1
 
         except (ValueError, KeyError, TypeError) as e:
             logger.warning(f"Failed to process period: {e}")
@@ -190,12 +196,12 @@ def ingest_regional_forecast() -> IngestionResult:
             result.records_failed += 1
             continue
     
-        logger.info(
-            f"Completed regional forecast ingestion for all DNOs: "
-            f"{result.records_created} created, "
-            f"{result.records_updated} updated, "
-            f"{result.records_failed} failed"
-        )
+    logger.info(
+        f"Completed regional forecast ingestion for all DNOs: "
+        f"{result.records_created} created, "
+        f"{result.records_updated} updated, "
+        f"{result.records_failed} failed"
+    )
     return result
 
 def ingest_national_actual():
