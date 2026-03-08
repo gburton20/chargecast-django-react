@@ -30,7 +30,7 @@ def ingest_national_forecast() -> IngestionResult:
     Uses update_or_create() to ensure idempotency - re-running will update existing records.
     
     Returns:
-        IngestionResult: Summary of ingestion operation with counts of created/updated/failed records.
+        IngestionResult: Summary of ingestion operation with the counts of created/updated/failed records.
     """
     logger.info("Starting national forecast ingestion...")
     national_forecast = get_national_forecast()
@@ -204,13 +204,87 @@ def ingest_regional_forecast() -> IngestionResult:
     )
     return result
 
-def ingest_national_actual():
+
+def ingest_national_actual() -> IngestionResult:
     """
     Ingest national carbon intensity actual data from the NESO API. 
 
-    Fetches 
+    Fetches the previous 24 hours of national actual data and stores it in the database. 
+
+    Uses update_or_create() to ensure idempotency - re-running will update existing records. 
+
+    Returns:
+        IngestionResult: A summary of the ingestion operation with the counts of created/updated/failed records.
 
     """
+    logger.info("Starting national actual ingestion...")
     national_actual = get_national_actual()
-    return
+    result = IngestionResult()
 
+    if "error" in national_actual:
+        logger.error(f"API error: {national_actual.get('error')}")
+        result.records_failed += 1
+        return result
+    
+    data = national_actual.get("data", [])
+    if not data:
+        logger.warning("No forecast data returned from API")
+        result.records_skipped += 1
+        return result
+    
+    national_actual_generated_at = timezone.now()
+
+    for period in data:
+        try:
+            valid_from = parse_datetime(period["from"])
+            valid_to = parse_datetime(period["to"])
+
+            if not valid_from or not valid_to:
+                logger.warning(f"Invalid datetime in period: {period}")
+                result.records_failed += 1
+                continue
+
+            # Extract intensity data:
+            intensity = period.get("intensity", {})
+            forecast = intensity.get("forecast")
+            index = intensity.get("index")
+
+            if forecast is None or index is None:
+                logger.warning(f"Missing intensity data in period: {period}")
+                result.records_failed += 1
+                continue
+
+            _, created = CarbonIntensityRecord.objects.update_or_create(
+                region_id=None,
+                valid_from=valid_from,
+                is_national=True,
+                defaults={
+                    "region_shortname": None,
+                    "valid_to": valid_to,
+                    "forecast": forecast,
+                    "index": index,
+                    "national_actual_generated_at": national_actual_generated_at,
+                },
+            )
+
+            if created:
+                result.records_created += 1
+            else:
+                result.records_updated += 1
+
+        except (ValueError, KeyError, TypeError) as e:
+            logger.warning(f"Failed to process period: {e}")
+            result.records_failed += 1
+            continue
+        except Exception as e:
+            logger.error(f"Unexpected error processing period: {e}")
+            result.records_failed += 1
+            continue
+
+    logger.info(
+        f"Completed national actual ingestion: "
+        f"{result.records_created} created, "
+        f"{result.records_updated} updated, "
+        f"{result.records_failed} failed"
+    )
+    return result
