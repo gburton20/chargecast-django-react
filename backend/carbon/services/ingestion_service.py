@@ -22,6 +22,7 @@ class IngestionResult:
     records_skipped: int = 0
     records_failed: int = 0
 
+
 def ingest_national_forecast() -> IngestionResult:
     """
     Ingest national carbon intensity forecast data from the NESO API.
@@ -106,6 +107,7 @@ def ingest_national_forecast() -> IngestionResult:
     )
     return result
 
+
 def ingest_regional_forecast() -> IngestionResult:
     """
     Ingest regional carbon intensity forecast data for all DNO regions from the NESO API. 
@@ -145,17 +147,56 @@ def ingest_regional_forecast() -> IngestionResult:
                 result.records_failed += 1
                 continue
             
-            # Extract intensity data:
-            intensity = period.get("intensity", {})
-            forecast = intensity.get("forecast")
-            index = intensity.get("index")
+            regions = period.get("regions", [])
+            # Extract intensity data per region in the regions list:
+            for region in regions:
+                region_id = region.get("regionid")
+                region_shortname = region.get("shortname")
+                intensity = region.get("intensity", {})
+                forecast = intensity.get("forecast")
+                index = intensity.get("index")
 
-            if forecast is None or index is None:
-                logger.warning(f"Missing intensity data in period {period}")
+                if forecast is None or index is None:
+                    logger.warning(f"Missing intensity data in period {period}")
+                    result.records_failed += 1
+                    continue
 
-        except:
+                # Store in database:
+                _, created = CarbonIntensityRecord.objects.update_or_create(
+                    region_id=region_id,
+                    valid_from=valid_from,
+                    is_national=False,
+                    defaults={
+                        "region_id":region_id,
+                        "region_shortname": region_shortname,
+                        "valid_to": valid_to,
+                        "forecast": forecast,
+                        "index": index,
+                        "forecast_generated_at": forecast_generated_at,
+                    },
+                )
 
-        return
+                if created:
+                    result.records_created += 1
+                else:
+                    result.records_updated += 1
+
+        except (ValueError, KeyError, TypeError) as e:
+            logger.warning(f"Failed to process period: {e}")
+            result.records_failed += 1
+            continue
+        except Exception as e:
+            logger.error(f"Unexpected error processing period: {e}")
+            result.records_failed += 1
+            continue
+    
+        logger.info(
+            f"Completed regional forecast ingestion for all DNOs: "
+            f"{result.records_created} created, "
+            f"{result.records_updated} updated, "
+            f"{result.records_failed} failed"
+        )
+    return result
 
 def ingest_national_actual():
     """
