@@ -106,11 +106,64 @@ def ingest_national_forecast() -> IngestionResult:
     )
     return result
 
-def ingest_regional_forecast():
+def ingest_regional_forecast() -> IngestionResult:
+    """
+    Ingest regional carbon intensity forecast data for all DNO regions from the NESO API. 
+
+    Fetches the next 48 hours of regional forecast data nationally and stores it in the database. 
+
+    Uses update_or_create() to ensure idemoptency - re-running will update existing records. 
+
+    Returns:
+        IngestionResult: Summary of ingestion operation with counts or created/updated/failed records.
+    """
+    logger.info("Starting regional forecast ingestion for all DNOs...")
     regional_forecast = get_regional_forecast()
-    return
+    result = IngestionResult()
+
+    if "error" in regional_forecast:
+        logger.error(f"API error: {regional_forecast.get('error')}")
+        result.records_failed = 1
+        return result
+    
+    data = regional_forecast.get("data", [])
+    if not data:
+        logger.warning("No forecast data returned from API")
+        result.records_skipped = 1
+        return result
+    
+    forecast_generated_at = timezone.now()
+
+    for period in data:
+        try:
+            # Parse timestamps
+            valid_from = parse_datetime(period["from"])
+            valid_to = parse_datetime(period["to"])
+
+            if not valid_from or not valid_to:
+                logger.warning(f"Invalid datetime in period: {period}")
+                result.records_failed += 1
+                continue
+            
+            # Extract intensity data:
+            intensity = period.get("intensity", {})
+            forecast = intensity.get("forecast")
+            index = intensity.get("index")
+
+            if forecast is None or index is None:
+                logger.warning(f"Missing intensity data in period {period}")
+
+        except:
+
+        return
 
 def ingest_national_actual():
+    """
+    Ingest national carbon intensity actual data from the NESO API. 
+
+    Fetches 
+
+    """
     national_actual = get_national_actual()
     return
 
