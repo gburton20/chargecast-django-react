@@ -592,7 +592,7 @@ class NESOIngestionTests(TestCase):
 			expected_forecast = 0 if run == 0 else 60
 			self.assertEqual(record.forecast, expected_forecast)
 
-	@patch("carbon.clients.neso_api_client.get_national_actual")
+	@patch("carbon.services.ingestion_service.get_national_actual")
 	def test_ingest_national_actual_updates_records_(self, mock_get_national_actual):
 		from carbon.services.ingestion_service import ingest_national_actual
 
@@ -640,3 +640,182 @@ class NESOIngestionTests(TestCase):
 			record = CarbonIntensityRecord.objects.get(is_national=True)
 			expected_actual = 300 if run == 0 else 400
 			self.assertEqual(record.actual, expected_actual)
+
+	# Edge case testing within NESOIngestionsTests() for 'Phase 2 - Carbon Ingestion' milestone tasks:
+
+	# Test for empty/missing response - one per ingestion function:
+	# Empty/missing test for ingest_national_forecast():
+	@patch("carbon.services.ingestion_service.get_national_forecast")
+	def test_ingest_national_forecast_handles_empty_response(self, mock_get):
+		from carbon.services.ingestion_service import ingest_national_forecast
+
+		mock_get.return_value = {"data": []}
+
+		result = ingest_national_forecast()
+
+		self.assertEqual(result.records_skipped, 1)
+		self.assertEqual(result.records_created, 0)
+		self.assertEqual(result.records_updated, 0)
+		self.assertEqual(result.records_failed, 0)
+		self.assertEqual(CarbonIntensityRecord.objects.count(), 0)
+
+	# Empty/missing test for ingest_regional_forecast():
+	@patch("carbon.services.ingestion_service.get_regional_forecast")
+	def test_ingest_regional_forecast_handles_empty_response(self, mock_get):
+		from carbon.services.ingestion_service import ingest_regional_forecast
+
+		mock_get.return_value = {"data": []}
+
+		result = ingest_regional_forecast()
+
+		self.assertEqual(result.records_skipped, 1)
+		self.assertEqual(result.records_created, 0)
+		self.assertEqual(result.records_updated, 0)
+		self.assertEqual(result.records_failed, 0)
+		self.assertEqual(CarbonIntensityRecord.objects.count(), 0)
+
+	# Empty/missing test for ingest_national_actual():
+	@patch("carbon.services.ingestion_service.get_national_actual")
+	def test_ingest_national_actual_handles_empty_response(self, mock_get):
+		from carbon.services.ingestion_service import ingest_national_actual
+
+		mock_get.return_value = {"data": []}
+
+		result = ingest_national_actual()
+
+		self.assertEqual(result.records_skipped, 1)
+		self.assertEqual(result.records_created, 0)
+		self.assertEqual(result.records_updated, 0)
+		self.assertEqual(result.records_failed, 0)
+		self.assertEqual(CarbonIntensityRecord.objects.count(), 0)
+
+
+	# Test for API error/timeout - one per ingestion function:
+	# API error/timeout test for ingest_national_forecast():
+	@patch("carbon.services.ingestion_service.get_national_forecast")
+	def test_ingest_national_forecast_handles_api_error_or_timeout(self, mock_get):
+		from carbon.services.ingestion_service import ingest_national_forecast
+
+		mock_get.return_value = {"error": "NESO API timeout"}
+
+		result = ingest_national_forecast()
+
+		self.assertEqual(result.records_skipped, 0)
+		self.assertEqual(result.records_created, 0)
+		self.assertEqual(result.records_updated, 0)
+		self.assertEqual(result.records_failed, 1)
+		self.assertEqual(CarbonIntensityRecord.objects.count(), 0)
+
+	# API error/timeout test for ingest_regional_forecast():
+	@patch("carbon.services.ingestion_service.get_regional_forecast")
+	def test_ingest_regional_forecast_handles_api_error_or_timeout(self, mock_get):
+		from carbon.services.ingestion_service import ingest_regional_forecast
+
+		mock_get.return_value = {"error": "NESO API timeout"}
+
+		result = ingest_regional_forecast()
+
+		self.assertEqual(result.records_skipped, 0)
+		self.assertEqual(result.records_created, 0)
+		self.assertEqual(result.records_updated, 0)
+		self.assertEqual(result.records_failed, 1)
+		self.assertEqual(CarbonIntensityRecord.objects.count(), 0)
+
+	# API error/timeout test for ingest_national_actual():
+	@patch("carbon.services.ingestion_service.get_national_actual")
+	def test_ingest_national_actual_handles_api_error_or_timeout(self, mock_get):
+		from carbon.services.ingestion_service import ingest_national_actual
+
+		mock_get.return_value = {"error": "NESO API timeout"}
+
+		result = ingest_national_actual()
+
+		self.assertEqual(result.records_skipped, 0)
+		self.assertEqual(result.records_created, 0)
+		self.assertEqual(result.records_updated, 0)
+		self.assertEqual(result.records_failed, 1)
+		self.assertEqual(CarbonIntensityRecord.objects.count(), 0)
+
+
+	# Test for partial/malformed data - one per ingestion function:
+	# Partial/malformed data test for ingest_national_forecast():
+	@patch("carbon.services.ingestion_service.get_national_forecast")
+	def test_ingest_national_forecast_handles_partial_or_malformed_data(self, mock_get):
+		from carbon.services.ingestion_service import ingest_national_forecast
+
+		mock_get.return_value = {
+			"data": [
+				{
+					"from": "2026-03-09T12:00Z",
+					"to": "2026-03-09T12:30Z",
+					"intensity": {
+						"forecast": None,
+						"actual": None,
+					},
+				}
+			]
+		}
+
+		result = ingest_national_forecast()
+
+		self.assertEqual(result.records_skipped, 0)
+		self.assertEqual(result.records_created, 0)
+		self.assertEqual(result.records_updated, 0)
+		self.assertEqual(result.records_failed, 1)
+		self.assertEqual(CarbonIntensityRecord.objects.count(), 0)
+
+	# Partial/malformed data test for ingest_regional_forecast():
+	@patch("carbon.services.ingestion_service.get_regional_forecast")
+	def test_ingest_regional_forecast_handles_partial_or_malformed_data(self, mock_get):
+		from carbon.services.ingestion_service import ingest_regional_forecast
+		mock_get.return_value = {
+			"data": [
+				{
+					"from": "2026-03-09T13:00Z",
+					"to": "2026-03-09T13:30Z",
+					"regions": [
+						{
+							"shortname": "North Scotland",
+							"intensity":{
+								"forecast": None, 
+								"index": "very low"
+							},
+						}
+					]
+				}
+			]
+		}
+
+		result = ingest_regional_forecast()
+
+		self.assertEqual(result.records_skipped, 0)
+		self.assertEqual(result.records_created, 0)
+		self.assertEqual(result.records_updated, 0)
+		self.assertEqual(result.records_failed, 1)
+		self.assertEqual(CarbonIntensityRecord.objects.count(), 0)
+
+	# Partial/malformed data test for ingest_national_actual():
+	@patch("carbon.services.ingestion_service.get_national_actual")
+	def test_ingest_national_actual_handles_partial_or_malformed_data(self, mock_get):
+		from carbon.services.ingestion_service import ingest_national_actual
+
+		mock_get.return_value = {
+			"data": [
+				{
+					"from": "2026-03-09T12:00Z",
+					"to": "2026-03-09T12:30Z",
+					"intensity": {
+						"actual": None,
+						"index": "moderate",
+					},
+				}
+			]
+		}
+
+		result = ingest_national_actual()
+
+		self.assertEqual(result.records_skipped, 0)
+		self.assertEqual(result.records_created, 0)
+		self.assertEqual(result.records_updated, 0)
+		self.assertEqual(result.records_failed, 1)
+		self.assertEqual(CarbonIntensityRecord.objects.count(), 0)
