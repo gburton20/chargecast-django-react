@@ -481,3 +481,162 @@ class NESOIntegrationTests(SimpleTestCase):
 		self.assertGreater(len(result["data"]), 0)
 		self.assertIsInstance(result["data"][0], dict)
 
+# Ingestion tests:
+class NESOIngestionTests(TestCase):
+	@patch("carbon.services.ingestion_service.get_national_forecast")
+	def test_ingest_national_forecast_creates_and_idempotently_updates_records_(self, mock_get_national_forecast):
+		from carbon.services.ingestion_service import ingest_national_forecast
+
+		for run in range(2):
+			if run == 0:
+				mock_get_national_forecast.return_value = {
+					"data": [
+						{
+							"from": "2026-03-09T12:00Z",
+							"to": "2026-03-09T12:30Z",
+							"intensity":{
+								"forecast": 250, 
+								"actual":None, 
+								"index": "moderate"
+							},
+						}
+					]
+				}
+
+			else:
+				mock_get_national_forecast.return_value = {
+					"data": [
+						{
+							"from": "2026-03-09T12:00Z",
+							"to": "2026-03-09T12:30Z",
+							"intensity":{
+								"forecast": 125, 
+								"actual":None, 
+								"index": "low"
+							},
+						}
+					]
+				}
+
+			result = ingest_national_forecast()
+
+			if run == 0:
+				self.assertEqual(result.records_created, 1)
+				self.assertEqual(result.records_updated, 0)
+			else:
+				self.assertEqual(result.records_created, 0)
+				self.assertEqual(result.records_updated, 1)
+				self.assertEqual(CarbonIntensityRecord.objects.filter(is_national=True).count(), 1)
+
+			record = CarbonIntensityRecord.objects.get(is_national=True)
+			expected_forecast = 250 if run == 0 else 125
+			self.assertEqual(record.forecast, expected_forecast)
+
+	
+	@patch("carbon.services.ingestion_service.get_regional_forecast")
+	def test_ingest_regional_forecast_creates_and_idempotently_updates_records(self, mock_get_regional_forecast):
+		from carbon.services.ingestion_service import ingest_regional_forecast
+
+		for run in range(2):
+			if run == 0:
+				mock_get_regional_forecast.return_value = {
+					"data": [
+						{
+							"from": "2026-03-09T13:00Z",
+							"to": "2026-03-09T13:30Z",
+							"regions": [
+								{
+									"regionid": 1,
+									"shortname": "North Scotland",
+									"intensity":{
+										"forecast": 0, 
+										"index": "very low"
+									}
+								}
+							]
+						}
+					]
+				}
+
+			else:
+				mock_get_regional_forecast.return_value = {
+					"data": [
+						{
+							"from": "2026-03-09T13:00Z",
+							"to": "2026-03-09T13:30Z",
+							"regions": [
+								{
+									"regionid": 1,
+									"shortname": "North Scotland",
+									"intensity":{
+										"forecast": 60, 
+										"index": "low"
+									}
+								}
+							]
+						}
+					]
+				}
+
+			result = ingest_regional_forecast()
+
+			if run == 0:
+				self.assertEqual(result.records_created, 1)
+				self.assertEqual(result.records_updated, 0)
+			else:
+				self.assertEqual(result.records_created, 0)
+				self.assertEqual(result.records_updated, 1)
+				self.assertEqual(CarbonIntensityRecord.objects.filter(is_national=False, region_id=1).count(), 1)
+
+			record = CarbonIntensityRecord.objects.get(is_national=False, region_id=1)
+			expected_forecast = 0 if run == 0 else 60
+			self.assertEqual(record.forecast, expected_forecast)
+
+	@patch("carbon.clients.neso_api_client.get_national_actual")
+	def test_ingest_national_actual_updates_records_(self, mock_get_national_actual):
+		from carbon.services.ingestion_service import ingest_national_actual
+
+		# Create pre-existing forecast record to be updated
+		valid_from = timezone.make_aware(datetime(2026, 3, 9, 12, 0, 0))
+		valid_to = timezone.make_aware(datetime(2026, 3, 9, 12, 30, 0))
+		CarbonIntensityRecord.objects.create(
+			region_id=None,
+			region_shortname=None,
+			valid_from=valid_from,
+			valid_to=valid_to,
+			forecast=350,
+			actual=None,
+			index=CarbonIntensityRecord.IntensityIndex.HIGH,
+			forecast_generated_at=timezone.now(),
+			is_national=True,
+		)
+
+		base_response = {
+			"data": [
+				{
+					"from": "2026-03-09T12:00Z",
+					"to": "2026-03-09T12:30Z",
+					"intensity":{
+						"forecast": 350, 
+						"actual": None, 
+						"index": "high"
+					},
+				}
+			]
+		}
+
+		for run in range(2):
+			base_response["data"][0]["intensity"]["actual"] = 300 if run == 0 else 400
+			mock_get_national_actual.return_value = base_response
+
+			result = ingest_national_actual()
+
+			if run == 0:
+				self.assertEqual(result.records_updated, 1)
+			else:
+				self.assertEqual(result.records_updated, 1)
+				self.assertEqual(CarbonIntensityRecord.objects.filter(is_national=True).count(), 1)
+
+			record = CarbonIntensityRecord.objects.get(is_national=True)
+			expected_actual = 300 if run == 0 else 400
+			self.assertEqual(record.actual, expected_actual)

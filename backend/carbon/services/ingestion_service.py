@@ -227,6 +227,7 @@ def ingest_national_actual() -> IngestionResult:
         return result
     
     data = national_actual.get("data", [])
+    
     if not data:
         logger.warning("No national actual data returned from API")
         result.records_skipped += 1
