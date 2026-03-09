@@ -100,9 +100,9 @@ def ingest_national_forecast() -> IngestionResult:
     
     logger.info(
         f"Completed national forecast ingestion: "
-        f"{result.records_created} created, "
-        f"{result.records_updated} updated, "
-        f"{result.records_failed} failed"
+        f"Number of records created: {result.records_created},"
+        f"Number of records updated: {result.records_updated},"
+        f"Number of records failed: {result.records_failed},"
     )
     return result
 
@@ -198,9 +198,9 @@ def ingest_regional_forecast() -> IngestionResult:
     
     logger.info(
         f"Completed regional forecast ingestion for all DNOs: "
-        f"{result.records_created} created, "
-        f"{result.records_updated} updated, "
-        f"{result.records_failed} failed"
+        f"Number of records created: {result.records_created},"
+        f"Number of records updated: {result.records_updated},"
+        f"Number of records failed: {result.records_failed},"
     )
     return result
 
@@ -211,13 +211,13 @@ def ingest_national_actual() -> IngestionResult:
 
     Fetches the previous 24 hours of national actual data and stores it in the database. 
 
-    Uses update_or_create() to ensure idempotency - re-running will update existing records. 
+    Updates existing national forecast rows with actual values to ensure idempotency. 
 
     Returns:
         IngestionResult: A summary of the ingestion operation with the counts of created/updated/failed records.
 
     """
-    logger.info("Starting national actual ingestion...")
+    logger.info("Starting national actual ingestion for the previous 24 hours...")
     national_actual = get_national_actual()
     result = IngestionResult()
 
@@ -228,7 +228,7 @@ def ingest_national_actual() -> IngestionResult:
     
     data = national_actual.get("data", [])
     if not data:
-        logger.warning("No forecast data returned from API")
+        logger.warning("No national actual data returned from API")
         result.records_skipped += 1
         return result
     
@@ -246,31 +246,33 @@ def ingest_national_actual() -> IngestionResult:
 
             # Extract intensity data:
             intensity = period.get("intensity", {})
-            forecast = intensity.get("forecast")
+            actual = intensity.get("actual")
             index = intensity.get("index")
 
-            if forecast is None or index is None:
+            if actual is None or index is None:
                 logger.warning(f"Missing intensity data in period: {period}")
                 result.records_failed += 1
                 continue
 
-            _, created = CarbonIntensityRecord.objects.update_or_create(
+            updated_count = CarbonIntensityRecord.objects.filter(
                 region_id=None,
                 valid_from=valid_from,
                 is_national=True,
-                defaults={
-                    "region_shortname": None,
-                    "valid_to": valid_to,
-                    "forecast": forecast,
-                    "index": index,
-                    "national_actual_generated_at": national_actual_generated_at,
-                },
+            ).update(
+                valid_to=valid_to,
+                actual=actual,
+                index=index,
+                forecast_generated_at=national_actual_generated_at,
             )
 
-            if created:
-                result.records_created += 1
+            if updated_count == 0:
+                logger.warning(
+                    "No matching national forecast row found for actual update "
+                    f"at valid_from={valid_from.isoformat()}"
+                )
+                result.records_skipped += 1
             else:
-                result.records_updated += 1
+                result.records_updated += updated_count
 
         except (ValueError, KeyError, TypeError) as e:
             logger.warning(f"Failed to process period: {e}")
@@ -283,8 +285,8 @@ def ingest_national_actual() -> IngestionResult:
 
     logger.info(
         f"Completed national actual ingestion: "
-        f"{result.records_created} created, "
-        f"{result.records_updated} updated, "
-        f"{result.records_failed} failed"
+        f"Number of records created: {result.records_created},"
+        f"Number of records updated: {result.records_updated},"
+        f"Number of records failed: {result.records_failed},"
     )
     return result
