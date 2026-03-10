@@ -50,65 +50,89 @@ class Command(BaseCommand):
     # *args ensures that an unknown number of arbitrary arguments, of data type tuple, can be passed into def handle(). In this case, *args is often empty and is preserved for positional arguments (if defined).
     # **options ensures that an unknown number of keyword arguments can be collected into a dict to then be passed into def handle(). The data associated with each keyword, in this case the --national-only etc. flags, can be accessed via dict index, options["national_only"] (option keys do not include leading dashes)
     def handle(self, *args, **options):
-        # Access the parsed option key "national_only" from the options within def add_arguments(). Assign it as a bool value (see the action="store_true" lines above) to 'national_only'
-        national_only = options["national_only"]
-        regional_only = options["regional_only"]
-        actual_only = options["actual_only"]
-        dry_run = options["dry_run"]
-        # stdout - the standard output from the BaseCommand class
-        # style determines console output formatting
-        self.stdout.write(self.style.NOTICE("Starting carbon data ingestion..."))
+        # For graceful error handling, execute the code block once and handle unexpected failures which may occur during execution
+        try:
+            # Access the parsed option key "national_only" from the options within def add_arguments(). Assign it as a bool value (see the action="store_true" lines above) to 'national_only'
+            national_only = options["national_only"]
+            regional_only = options["regional_only"]
+            actual_only = options["actual_only"]
+            dry_run = options["dry_run"]
+            # stdout - the standard output from the BaseCommand class
+            # style determines console output formatting
+            self.stdout.write(self.style.NOTICE("Starting carbon data ingestion..."))
 
-        if dry_run:
-            self.stdout.write(self.style.WARNING("Running in DRY RUN mode..."))
-
-        total = IngestionResult()
-        # The following variables are needed to decide which ingestion jobs should run based on flag combinations
-        run_national = national_only or not (regional_only or actual_only)
-        run_regional = regional_only or not (national_only or actual_only)
-        run_actual = actual_only or not (national_only or regional_only)
-
-        # If 0/3 flagged argument objects in add_arguments() or if only --national-only passed:
-        if run_national:
-            # If dry_run, and records aren't written to the DB
             if dry_run:
-                # Django's transaction.atomic() allows the following code to run as if writing to a DB in production. Atomicity in this context relates to all or nothing series of database operations - either all operations succeed or they all fail. No partial commits are allowed
-                with transaction.atomic():
-                    # Write to the console this NOTICE method to confirm the orchestration process has started for option["national_only"]
+                self.stdout.write(self.style.WARNING("Running in DRY RUN mode..."))
+
+            total = IngestionResult()
+            # The following variables are needed to decide which ingestion jobs should run based on flag combinations
+            run_national = national_only or not (regional_only or actual_only)
+            run_regional = regional_only or not (national_only or actual_only)
+            run_actual = actual_only or not (national_only or regional_only)
+
+            # If 0/3 flagged argument objects in add_arguments() or if only --national-only passed:
+            if run_national:
+                # If dry_run, and records aren't written to the DB
+                if dry_run:
+                    # Django's transaction.atomic() allows the following code to run as if writing to a DB in production. Atomicity in this context relates to all or nothing series of database operations - either all operations succeed or they all fail. No partial commits are allowed
+                    with transaction.atomic():
+                        # Write to the console this NOTICE method to confirm the orchestration process has started for option["national_only"]
+                        self.stdout.write(self.style.NOTICE("Ingesting national forecast..."))
+                        # Call ingest_national_forecast(), and assign the return value to result
+                        result = ingest_national_forecast()
+                        # All DB writes to be rolled back at the end, preventing the writing of these records to the DB. In this context, rollback is forced even if no exception occurs, extending the protection against DB writing:
+                        transaction.set_rollback(True)
+                else:
                     self.stdout.write(self.style.NOTICE("Ingesting national forecast..."))
-                    # Call ingest_national_forecast(), and assign the return value to result
                     result = ingest_national_forecast()
-                    # All DB writes to be rolled back at the end, preventing the writing of these records to the DB. In this context, rollback is forced even if no exception occurs, extending the protection against DB writing:
-                    transaction.set_rollback(True)
-            else:
-                self.stdout.write(self.style.NOTICE("Ingesting national forecast..."))
-                result = ingest_national_forecast()
-            # For this instance of the Command class processed, relative to run_national only, update IngestionResult() with the total int value against the corresponding result key
-            self._accumulate(total, result)
+                # For this instance of the Command class processed, relative to run_national only, update IngestionResult() with the total int value against the corresponding result key
+                self._accumulate(total, result)
 
-        if run_regional:
-            if dry_run:
-                with transaction.atomic():
+            if run_regional:
+                if dry_run:
+                    with transaction.atomic():
+                        self.stdout.write(self.style.NOTICE("Ingesting regional forecast..."))
+                        result = ingest_regional_forecast()
+                        transaction.set_rollback(True)
+                else:
                     self.stdout.write(self.style.NOTICE("Ingesting regional forecast..."))
                     result = ingest_regional_forecast()
-                    transaction.set_rollback(True)
-            else:
-                self.stdout.write(self.style.NOTICE("Ingesting regional forecast..."))
-                result = ingest_regional_forecast()
-            self._accumulate(total, result)
+                self._accumulate(total, result)
 
-        if run_actual:
-            if dry_run:
-                with transaction.atomic():
+            if run_actual:
+                if dry_run:
+                    with transaction.atomic():
+                        self.stdout.write(self.style.NOTICE("Ingesting national actual..."))
+                        result = ingest_national_actual()
+                        transaction.set_rollback(True)
+                else:
                     self.stdout.write(self.style.NOTICE("Ingesting national actual..."))
                     result = ingest_national_actual()
-                    transaction.set_rollback(True)
-            else:
-                self.stdout.write(self.style.NOTICE("Ingesting national actual..."))
-                result = ingest_national_actual()
-            self._accumulate(total, result)
-        
-        self._print_summary(total)
+                self._accumulate(total, result)
+            
+            self._print_summary(total)
+
+            # Under the strict policy, any failed records make the command fail overall
+            # If the total number of records_failed is greater than 0
+            if total.records_failed > 0:
+                # CommandError lets one attach a human-readable message to the failure - providing a meaningful explanation rather than a bare exit code number
+                # The correct way to signal, in a Django management command, that the command should be treated as failed at the CLI level
+                # The ingestion code ran successfully, but the results showed records_failed > 0. An expected business logic failure
+                raise CommandError(
+                    f"Carbon data ingestion completed with {total.records_failed} failed record(s)."
+                )
+            
+        # Re-raise any CommandError that occurred in the try block, preventing the broader except Exception below from swallowing it        
+        except CommandError:
+            raise
+        # Catch any unexpected exception that isn't a CommandError (e.g. a programming error or unforeseen runtime failure)
+        except Exception as exc:
+            # Write a new ERROR message to CLI, with the value of the exc variable 'exc' inserted
+            self.stderr.write(
+                self.style.ERROR(f"Carbon data ingestion failed unexpectedly: {exc}")
+            )
+            # And raise another CommandError communicating that the ingestion failed for an unknown reason
+            raise CommandError("Carbon data ingestion failed unexpectedly.") from exc
 
 
     def _accumulate(self, total, result):
@@ -119,8 +143,13 @@ class Command(BaseCommand):
 
     def _print_summary(self, result):
         self.stdout.write("")
-        self.stdout.write(self.style.SUCCESS("Ingestion complete"))
+        if result.records_failed > 0:
+            self.stdout.write(self.style.ERROR("Ingestion completed with failures"))
+        else:
+            self.stdout.write(self.style.SUCCESS("Ingestion complete"))
         self.stdout.write(f"Created : {result.records_created}")
         self.stdout.write(f"Updated : {result.records_updated}")
         self.stdout.write(f"Skipped : {result.records_skipped}")
         self.stdout.write(f"Failed : {result.records_failed}")
+
+

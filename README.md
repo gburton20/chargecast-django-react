@@ -82,3 +82,34 @@ To confirm the status of your migrations:
 cd backend
 python manage.py showmigrations
 ```
+
+# Orchestration of carbon data ingestion via CLI (for human input and Render cron jobs)
+
+Use the management command below to orchestrate carbon ingestion jobs:
+
+```bash
+cd backend
+python manage.py ingest_carbon_data [--national-only | --regional-only | --actual-only] [--dry-run]
+```
+
+Notes:
+- If no `--*-only` flag is provided, all three jobs run (national forecast, regional forecast, national actual).
+- The `--national-only`, `--regional-only`, and `--actual-only` flags are mutually exclusive (only one can be used per run).
+- `--dry-run` executes the flow but rolls back database writes at the end.
+
+Examples:
+
+```bash
+# Run all three ingestion jobs
+cd backend
+python manage.py ingest_carbon_data
+
+# Run one job only
+python manage.py ingest_carbon_data --national-only
+python manage.py ingest_carbon_data --regional-only
+python manage.py ingest_carbon_data --actual-only
+
+# Dry-run variants (no persisted DB writes)
+python manage.py ingest_carbon_data --dry-run
+python manage.py ingest_carbon_data --national-only --dry-run
+```

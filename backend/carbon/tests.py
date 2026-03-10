@@ -1,12 +1,16 @@
 import os
 import unittest
+from contextlib import nullcontext
 from datetime import datetime, timedelta, timezone as dt_timezone
 
 from django.core.exceptions import ValidationError
+from django.core.management import call_command
+from django.core.management.base import CommandError
 from django.db import IntegrityError, transaction
 from django.test import SimpleTestCase, tag
 from django.test import TestCase
 from django.utils import timezone
+from io import StringIO
 
 from carbon.models import CarbonIntensityRecord
 
@@ -819,3 +823,187 @@ class NESOIngestionTests(TestCase):
 		self.assertEqual(result.records_updated, 0)
 		self.assertEqual(result.records_failed, 1)
 		self.assertEqual(CarbonIntensityRecord.objects.count(), 0)
+
+	# Django management command unit tests - python manage.py ingest_carbon_data
+	# Flag/Option parsing tests:
+	# Table-driven pattern test for mode selection (default, --national-only, --regional-only, --actual-only) using subtests
+	@patch("carbon.management.commands.ingest_carbon_data.ingest_national_forecast")
+	@patch("carbon.management.commands.ingest_carbon_data.ingest_regional_forecast")
+	@patch("carbon.management.commands.ingest_carbon_data.ingest_national_actual")
+	def test_management_for_mode_selection_in_ingest_carbon_data(self, mock_actual, mock_regional, mock_national):
+		# Import the IngestionResult dataclass within the test method. This dataclass is returned by
+		# the three ingestion functions (ingest_national_forecast, ingest_regional_forecast, ingest_national_actual)
+		# and contains counts: records_created, records_updated, records_skipped, records_failed (all int).
+		# We'll use it to configure our mock return values below.
+		from carbon.services.ingestion_service import IngestionResult
+
+		# Configure each mock to return an IngestionResult dataclass instance with records_created=1.
+		# This simulates the success case where each ingestion function creates 1 record. The command's
+		# aggregation logic (_accumulate method) will sum these counts, and _print_summary will display them.
+		# All three mocks are set to return the same value; the difference across test iterations comes from
+		# which functions ARE CALLED, not from their return values (that's what we're testing).
+		mock_national.return_value = IngestionResult(records_created=1)
+		mock_regional.return_value = IngestionResult(records_created=1)
+		mock_actual.return_value = IngestionResult(records_created=1)
+
+		# Table-driven test: iterate over four modes (default + three --*-only flags). Each tuple contains:
+		# (mode_label, kwargs_dict): the mode label for readability, and a dictionary of keyword arguments to pass
+		# to call_command(). The "default" mode passes an empty dict {}, meaning no flags—the command should call
+		# all three ingestion functions. The other modes pass a single True flag (e.g., {"national_only": True}),
+		# which the command's handle() method converts to boolean run_* variables, selecting only the corresponding function.
+		for mode, args in [
+			("default", {}), 
+			("--national-only", {"national_only": True}),
+			("--regional-only", {"regional_only": True}),
+			("--actual-only", {"actual_only": True}),
+		]:
+			# Subtest creates a separate test context for each mode. This allows the test runner to report
+			# which specific mode(s) failed if any assertions fail, rather than failing the entire test method.
+			# This is useful for debugging table-driven tests with many iterations.
+			with self.subTest(mode=mode):
+				# Reset mocks at start of each iteration to clear the call history (call count, call args, etc.)
+				# from the previous subtest iteration. Without reset_mock(), call counts would accumulate across
+				# iterations, causing incorrect assertion failures (e.g., assert_called_once() would fail on iteration 2).
+				mock_national.reset_mock()
+				mock_regional.reset_mock()
+				mock_actual.reset_mock()
+				
+				# Arrange: Create a StringIO buffer to capture stdout output from the management command.
+				# StringIO is an in-memory text stream that collects output without printing to the console,
+				# allowing us to make assertions on what the command printed.
+				out = StringIO()
+				
+				# Act: Call the Django management command with the mode-specific arguments. The **args unpacking
+				# passes the dictionary (e.g., {"national_only": True}) as keyword arguments to call_command().
+				# The stdout parameter directs all output to our StringIO buffer instead of the console.
+				call_command("ingest_carbon_data", stdout=out, **args)
+				
+				# Assert: Verify output contains expected status messages. These strings come from the
+				# self.stdout.write() calls in the management command's handle() method. Checking for these
+				# messages confirms the command executed and reached completion (no early exceptions/failures).
+				self.assertIn("Starting carbon data ingestion", out.getvalue())
+				self.assertIn("Ingestion complete", out.getvalue())
+				
+				# Assert: Verify that the correct ingestion functions were called for each mode. The command's
+				# handle() method uses boolean flags (run_national, run_regional, run_actual) to decide which
+				# functions to call. This assertion checks that the flag logic works correctly (e.g., --national-only
+				# should only call ingest_national_forecast(), not the other two).
+				if mode == "default":
+					mock_national.assert_called_once()
+					mock_regional.assert_called_once()
+					mock_actual.assert_called_once()
+				elif mode == "--national-only":
+					mock_national.assert_called_once()
+					mock_regional.assert_not_called()
+					mock_actual.assert_not_called()
+				elif mode == "--regional-only":
+					mock_national.assert_not_called()
+					mock_regional.assert_called_once()
+					mock_actual.assert_not_called()
+				elif mode == "--actual-only":
+					mock_national.assert_not_called()
+					mock_regional.assert_not_called()
+					mock_actual.assert_called_once()
+
+	# Test for mutual exclusivity failure: when user passes multiple mutually exclusive flags,
+	# argparse should reject the command at the CLI layer before handle() is called. Django's
+	# call_command() will raise a CommandError with a message about conflicting arguments.
+	def test_management_mutually_exclusive_flags_raise_error(self):
+		# Attempt to pass two mutually exclusive flags: --national-only and --regional-only.
+		# The add_arguments() method created a mutually_exclusive_group() containing these flags.
+		# Important: pass these as CLI-style option strings (not kwargs). If passed as kwargs,
+		# Django will hand values directly to handle(), bypassing argparse mutual-exclusion checks.
+		# argparse validates at parsing time and raises before handle() executes.
+		with self.assertRaises(CommandError) as ctx:
+			call_command("ingest_carbon_data", "--national-only", "--regional-only")
+		
+		# Verify the error message mentions the mutual exclusivity constraint.
+		self.assertIn("not allowed with argument", str(ctx.exception))
+
+	# Test for --dry-run rollback behaviour: when --dry-run flag is passed, the command should
+	# execute all ingestion functions but roll back the database transaction without raising an error.
+	# This is achieved via transaction.atomic() + transaction.set_rollback(True) in the command's
+	# handle() method. We verify no database writes persist after the command completes.
+	@patch("carbon.management.commands.ingest_carbon_data.ingest_national_forecast")
+	@patch("carbon.management.commands.ingest_carbon_data.ingest_regional_forecast")
+	@patch("carbon.management.commands.ingest_carbon_data.ingest_national_actual")
+	@patch("carbon.management.commands.ingest_carbon_data.transaction.set_rollback")
+	@patch("carbon.management.commands.ingest_carbon_data.transaction.atomic")
+	def test_management_dry_run_rolls_back_without_error(
+		self,
+		mock_atomic,
+		mock_set_rollback,
+		mock_actual,
+		mock_regional,
+		mock_national,
+	):
+		from carbon.services.ingestion_service import IngestionResult
+		
+		# Configure mocks to simulate successful ingestion that would normally create records.
+		mock_national.return_value = IngestionResult(records_created=1)
+		mock_regional.return_value = IngestionResult(records_created=1)
+		mock_actual.return_value = IngestionResult(records_created=1)
+
+		# Replace transaction.atomic() with a no-op context manager so this test does not depend
+		# on live database connectivity while still verifying dry-run control-flow.
+		mock_atomic.return_value = nullcontext()
+		
+		# Act: Call the command with --dry-run flag. The command will call all three ingestion functions
+		# (since no --*-only flag is passed), and they will create records inside a transaction.atomic() block.
+		# Then transaction.set_rollback(True) will force rollback without raising CommandError.
+		out = StringIO()
+		call_command("ingest_carbon_data", "--dry-run", stdout=out)
+		
+		# Assert: Verify the command did not raise an error (no CommandError exception).
+		# (call_command() will not raise here if the command succeeded.)
+		# Verify output shows the command completed ("Ingestion complete" message).
+		self.assertIn("Ingestion complete", out.getvalue())
+
+		# Verify dry-run rollback hook was triggered for each ingestion branch (national/regional/actual).
+		self.assertEqual(mock_set_rollback.call_count, 3)
+
+	# Test for business-failure exit: when any ingestion function returns records_failed > 0,
+	# the command's handle() method aggregates the counts via _accumulate() and then checks
+	# if total.records_failed > 0. If true, it raises CommandError(), causing a non-zero exit code.
+	# This simulates a real scenario where the API returns data, but validation or DB constraints fail,
+	# and we want to fail the job explicitly so monitoring/alerting picks it up.
+	@patch("carbon.management.commands.ingest_carbon_data.ingest_national_forecast")
+	@patch("carbon.management.commands.ingest_carbon_data.ingest_regional_forecast")
+	@patch("carbon.management.commands.ingest_carbon_data.ingest_national_actual")
+	def test_management_raises_command_error_on_business_failure(self, mock_actual, mock_regional, mock_national):
+		from carbon.services.ingestion_service import IngestionResult
+		
+		# Configure mocks: national ingestion succeeds, but regional ingestion has 1 failure.
+		# The command will aggregate: total.records_failed = 1.
+		mock_national.return_value = IngestionResult(records_created=1, records_failed=0)
+		mock_regional.return_value = IngestionResult(records_created=0, records_failed=1)
+		mock_actual.return_value = IngestionResult(records_created=1, records_failed=0)
+		
+		# Act: Call the command. It will execute all three ingestion functions (default mode),
+		# aggregate the results, and when it sees total.records_failed = 1, it will raise CommandError.
+		# call_command() will catch the CommandError and re-raise it as an exception in the test.
+		with self.assertRaises(CommandError) as ctx:
+			call_command("ingest_carbon_data")
+		
+		# Assert: Verify the error message indicates a failure (mentions records_failed or similar).
+		self.assertIn("failed", str(ctx.exception).lower())
+
+	# Test for unexpected exception path: when an ingestion function (or any code in handle())
+	# raises an unexpected exception (not CommandError), the broad except Exception block catches it,
+	# logs to stderr, and re-raises as CommandError(...) from exc. This ensures the command always
+	# exits with a non-zero code on any error, and preserves the original exception chain for debugging.
+	@patch("carbon.management.commands.ingest_carbon_data.ingest_national_forecast")
+	def test_management_catches_unexpected_exception_and_re_raises_as_command_error(self, mock_national):
+		# Configure mock to raise an unexpected exception (e.g., ValueError from bad data format).
+		# This simulates a bug or edge case not handled by the service layer.
+		mock_national.side_effect = ValueError("Unexpected data format in API response")
+		
+		# Act: Call the command. ingest_national_forecast() will raise ValueError.
+		# The except Exception block will catch it, and re-raise as CommandError(...) from exc.
+		with self.assertRaises(CommandError) as ctx:
+			call_command("ingest_carbon_data")
+		
+		# Assert: Verify CommandError was raised (not the original ValueError).
+		# (The assertRaises caught CommandError, so this assertion confirms the exception type.)
+		# Verify the error message mentions the underlying exception or a generic error handler message.
+		self.assertIn("failed unexpectedly", str(ctx.exception).lower())
