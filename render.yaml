@@ -2,7 +2,7 @@
 services:
 
   - type: cron
-    name: ingest-carbon-data
+    name: chargecast-ingest-carbon-data-30m
     runtime: python
     plan: starter
     rootDir: backend
