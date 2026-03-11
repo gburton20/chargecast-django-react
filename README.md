@@ -113,3 +113,7 @@ python manage.py ingest_carbon_data --actual-only
 python manage.py ingest_carbon_data --dry-run
 python manage.py ingest_carbon_data --national-only --dry-run
 ```
+
+# Render cron job configuration for 30-minute ingestion
+
+The configuration file for this automated Render cron job is located at the root level of this project, in render.yaml.

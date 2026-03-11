@@ -1,0 +1,14 @@
+
+services:
+
+  - type: cron
+    name: ingest-carbon-data
+    runtime: python
+    plan: starter
+    schedule: '*/30 * * * *' # Every 30 minutes
+    buildCommand: |
+      pip install -r requirements.txt
+    startCommand: |
+      python manage.py ingest_carbon_data
+    repo: https://github.com/gburton20/chargecast-django-react
+    # envVars input directly into the Render dashboard
