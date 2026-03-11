@@ -5,6 +5,7 @@ services:
     name: ingest-carbon-data
     runtime: python
     plan: starter
+    rootDir: backend
     schedule: '*/30 * * * *' # Every 30 minutes
     buildCommand: |
       pip install -r requirements.txt

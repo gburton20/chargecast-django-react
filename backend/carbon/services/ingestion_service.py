@@ -250,9 +250,16 @@ def ingest_national_actual() -> IngestionResult:
             actual = intensity.get("actual")
             index = intensity.get("index")
 
-            if actual is None or index is None:
-                logger.warning(f"Missing intensity data in period: {period}")
+            if index is None:
+                logger.warning(f"Missing intensity index in period: {period}")
                 result.records_failed += 1
+                continue
+
+            # actual=None is valid: the API returns null for the most recent period
+            # when the actual reading hasn't been published yet. Skip rather than fail.
+            if actual is None:
+                logger.info(f"Actual data not yet available for period {period.get('from')} — skipping")
+                result.records_skipped += 1
                 continue
 
             updated_count = CarbonIntensityRecord.objects.filter(

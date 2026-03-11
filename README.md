@@ -117,3 +117,13 @@ python manage.py ingest_carbon_data --national-only --dry-run
 # Render cron job configuration for 30-minute ingestion
 
 The configuration file for this automated Render cron job is located at the root level of this project, in render.yaml.
+
+The service name for this Render cron job is 'chargecast-ingest-carbon-data-30m', and is located within the 'ChargeCast' Render project. 
+
+The cron job currently uses the dev branch to build and deploy, and uses backend/ as its root directory. In production, it will use the main branch.
+
+Its Command is: backend/ $ python manage.py ingest_carbon_data
+
+Its Build Command is: backend/ $ pip install -r requirements.txt. 
+
+It autodeploys on commit to GitHub, and its environment variables replicate those of the chargecast-django-react Render web service. 

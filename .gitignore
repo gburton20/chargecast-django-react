@@ -212,3 +212,6 @@ __marimo__/
 # IDEs
 .vscode/
 .idea/
+
+# Render logs
+Render Cron Job Logs.rtf
