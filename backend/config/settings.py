@@ -150,3 +150,32 @@ STATIC_URL = 'static/'
 NESO_API_TIMEOUT_SECONDS = int(os.getenv("NESO_API_TIMEOUT_SECONDS", "10"))
 NESO_API_MAX_RETRIES = int(os.getenv("NESO_API_MAX_RETRIES", "3"))
 NESO_API_BACKOFF_FACTOR = int(os.getenv("NESO_API_BACKOFF_FACTOR", "2"))
+
+LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "structured": {
+            "()": "config.logging.StructuredJsonFormatter",
+        },
+    },
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "formatter": "structured",
+        },
+    },
+    "loggers": {
+        "": {
+            "handlers": ["console"],
+            "level": LOG_LEVEL,
+        },
+        "carbon": {
+            "handlers": ["console"],
+            "level": LOG_LEVEL,
+            "propagate": False,
+        },
+    },
+}

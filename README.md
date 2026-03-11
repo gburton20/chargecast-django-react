@@ -123,3 +123,54 @@ Its infrastructure is defined in `render.yaml`, with backend configured as the r
 The job writes forecast and actual carbon intensity data to the `carbon_carbonintensityrecord` table in the project PostgreSQL database. 
 
 The cron job must be configured with the same required environment variable values as the backend web service. It currently auto-deploys from the `dev` branch; production should point to `main`.
+
+# Structured logging for carbon ingestion
+
+The ingestion pipeline now uses structured JSON logs for:
+
+- NESO API client requests, responses, retries, and errors
+- Ingestion service lifecycle events (start, parse errors, DB errors, completion)
+- Management command orchestration and final run summary
+
+All logs are emitted to stdout via Django logging config (`backend/config/settings.py`) and are captured by Render automatically.
+
+## Log schema
+
+Each log entry includes:
+
+- `timestamp`
+- `level`
+- `logger`
+- `message`
+- `event` (stable machine-readable event name)
+- contextual fields (for example `run_id`, `scope`, `endpoint`, `status_code`, `records_created`, `records_failed`)
+
+## Configuration
+
+Environment variable:
+
+- `LOG_LEVEL` (default: `INFO`)
+
+Implementation files:
+
+- `backend/config/logging.py` for JSON formatting
+- `backend/config/settings.py` for logger/handler wiring
+
+## Manual verification
+
+Run the command locally:
+
+```bash
+cd backend
+python manage.py ingest_carbon_data
+```
+
+Look for JSON log lines containing events such as:
+
+- `ingestion_command_started`
+- `neso_api_request_started`
+- `ingestion_database_error`
+- `ingestion_completed`
+- `ingestion_command_completed`
+
+For production verification, open Render logs for `chargecast-ingest-carbon-data-30m` and confirm the same events appear with metrics fields (`records_created`, `records_updated`, `records_skipped`, `records_failed`).

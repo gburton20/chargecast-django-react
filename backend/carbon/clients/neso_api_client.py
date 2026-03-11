@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from datetime import timezone as dt_timezone
+import logging
 import random
 import time
 from typing import Any
@@ -15,6 +16,7 @@ NESO_API_TIMEOUT_SECONDS = getattr(settings, "NESO_API_TIMEOUT_SECONDS", 10)
 NESO_API_MAX_RETRIES = getattr(settings, "NESO_API_MAX_RETRIES", 3)
 NESO_API_BACKOFF_FACTOR = getattr(settings, "NESO_API_BACKOFF_FACTOR", 1.5)
 _DEFAULT_HEADERS = {"Accept": "application/json"}
+logger = logging.getLogger(__name__)
 
 
 def _iso8601_utc_minute_from_now() -> str:
@@ -45,26 +47,130 @@ def _get_json(url: str) -> dict[str, Any]:
     last_error_message: str | None = None
 
     for attempt in range(NESO_API_MAX_RETRIES + 1):
+        attempt_number = attempt + 1
+        request_start = time.monotonic()
         try:
+            logger.info(
+                "NESO API request started",
+                extra={
+                    "event": "neso_api_request_started",
+                    "context": {
+                        "endpoint": url,
+                        "attempt": attempt_number,
+                        "max_attempts": NESO_API_MAX_RETRIES + 1,
+                    },
+                },
+            )
             response = requests.get(url, headers=_DEFAULT_HEADERS, timeout=NESO_API_TIMEOUT_SECONDS)
+            elapsed_ms = int((time.monotonic() - request_start) * 1000)
+            logger.info(
+                "NESO API response received",
+                extra={
+                    "event": "neso_api_response_received",
+                    "context": {
+                        "endpoint": url,
+                        "attempt": attempt_number,
+                        "status_code": response.status_code,
+                        "elapsed_ms": elapsed_ms,
+                    },
+                },
+            )
             response.raise_for_status()
             return response.json()
         except requests.exceptions.Timeout:
             last_error_message = "Request to NESO API timed out"
+            logger.warning(
+                "NESO API timeout",
+                extra={
+                    "event": "neso_api_request_timeout",
+                    "context": {
+                        "endpoint": url,
+                        "attempt": attempt_number,
+                    },
+                },
+            )
         except requests.exceptions.HTTPError as exc:
             status = exc.response.status_code if exc.response else None
+            response_body = (exc.response.text[:1000] if exc.response and exc.response.text else None)
             if status == 404:
+                logger.error(
+                    "NESO API endpoint not found",
+                    extra={
+                        "event": "neso_api_http_error",
+                        "context": {
+                            "endpoint": url,
+                            "status_code": status,
+                            "response_body": response_body,
+                        },
+                    },
+                )
                 return {"error": "NESO API endpoint not found"}
             if status == 429:
                 last_error_message = "NESO API rate limited (429)"
             elif status and status >= 500:
                 last_error_message = "NESO API server error"
             else:
+                logger.error(
+                    "NESO API non-retryable HTTP error",
+                    extra={
+                        "event": "neso_api_http_error",
+                        "context": {
+                            "endpoint": url,
+                            "status_code": status,
+                            "response_body": response_body,
+                        },
+                    },
+                )
                 return {"error": f"NESO API HTTP error ({status})"}
+            logger.warning(
+                "NESO API retryable HTTP error",
+                extra={
+                    "event": "neso_api_http_retry",
+                    "context": {
+                        "endpoint": url,
+                        "status_code": status,
+                        "response_body": response_body,
+                        "attempt": attempt_number,
+                    },
+                },
+            )
         except requests.exceptions.RequestException:
             last_error_message = "NESO API request failed"
+            logger.warning(
+                "NESO API request failed",
+                extra={
+                    "event": "neso_api_request_exception",
+                    "context": {
+                        "endpoint": url,
+                        "attempt": attempt_number,
+                    },
+                },
+            )
+        except ValueError:
+            logger.error(
+                "NESO API response parsing failed",
+                extra={
+                    "event": "neso_api_response_parse_error",
+                    "context": {
+                        "endpoint": url,
+                        "attempt": attempt_number,
+                    },
+                },
+            )
+            return {"error": "NESO API response parsing error"}
 
         if attempt >= NESO_API_MAX_RETRIES:
+            logger.error(
+                "NESO API request exhausted retries",
+                extra={
+                    "event": "neso_api_request_failed",
+                    "context": {
+                        "endpoint": url,
+                        "max_retries": NESO_API_MAX_RETRIES,
+                        "error_message": last_error_message,
+                    },
+                },
+            )
             return {"error": f"{last_error_message} after {NESO_API_MAX_RETRIES} retries"}
 
         sleep_seconds = (NESO_API_BACKOFF_FACTOR * (2**attempt)) + random.uniform(0, 0.5)
