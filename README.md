@@ -46,13 +46,14 @@ Notes:
 
 This project's remote PostgreSQL databases are hosted via Supabase. 
 
-There are three Django apps within this project: `core`, `carbon` and `fleet`. 
+There are four Django apps within this project: `core`, `carbon`, `chargers`, and `fleet`. 
 
 Here is a list of the names of DB models created per app:
 
-1) `core`: Region, PostcodeRegionCache, ChargerLocation
+1) `core`: Region, PostcodeRegionCache
 2) `carbon`: CarbonIntensityRecord
-3) `fleet`: FleetUploadBatch, FleetChargingEvent
+3) `chargers`: ChargerLocation, EVSE, Connector, Tariff, ConnectorTariff
+4) `fleet`: FleetUploadBatch, FleetChargingEvent
 
 Before running migrations, it is essential to configure the project's .env file with the correct env vars which are themselves derived from the project's Supabase connection settings:
 
@@ -174,3 +175,18 @@ Look for JSON log lines containing events such as:
 - `ingestion_command_completed`
 
 For production verification, open Render logs for `chargecast-ingest-carbon-data-30m` and confirm the same events appear with metrics fields (`records_created`, `records_updated`, `records_skipped`, `records_failed`).
+
+## Model hierarchy within `chargers`
+
+The `chargers` app models the OCPI-aligned charger and tariff hierarchy used for Phase 3A ingestion:
+
+`ChargerLocation` -> `EVSE` -> `Connector` -> `Tariff` via `ConnectorTariff`
+
+Relationship summary:
+
+- A `ChargerLocation` can have many `EVSE` records.
+- An `EVSE` can have many `Connector` records.
+- A `Connector` can be linked to many `Tariff` records through `ConnectorTariff`.
+- `ingested_at` is explicitly written during each ingestion cycle so freshness reflects the last successful processing run rather than original row creation time.
+- `is_active` is used as a soft-delete flag so locations missing from an upstream feed can be hidden without losing historical relationships.
+- `EVSE.status` uses a canonical choice set with `UNKNOWN` as the safe fallback for missing or unmappable upstream statuses.

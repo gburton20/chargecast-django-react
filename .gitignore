@@ -215,3 +215,6 @@ __marimo__/
 
 # Render logs
 Render Cron Job Logs.rtf
+
+# Issue invariants for QA issue content against architecture.md
+issue-invariants.md

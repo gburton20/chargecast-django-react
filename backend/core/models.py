@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from django.db import models
+import uuid
 
 # Helper function to standardise the format of postcodes input by the user to a capitalised postcode with no whitespace between letters. This function returns the canonical postcode storage/input for ChargeCast:
 def normalise_postcode(value: str | None) -> str | None:
@@ -63,27 +64,12 @@ class PostcodeRegionCache(models.Model):
     def __str__(self) -> str:  # pragma: no cover
         return f"{self.postcode} -> {self.region_shortname}"
 
-
-class ChargerLocation(models.Model):
-    """Represents a charging location with a lat/lng point and a resolved region."""
-
-    name = models.CharField(max_length=128)
-    postcode = models.CharField(max_length=16, db_index=True)
-    latitude = models.DecimalField(max_digits=9, decimal_places=6)
-    longitude = models.DecimalField(max_digits=9, decimal_places=6)
-    region_id = models.CharField(max_length=64, db_index=True)
+# Current replacement for legacy ChargerLocation in this file, TimeStampedModel
+class TimeStampedModel(models.Model):
+    """Abstract base model with created/updated timestamps"""
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
+    
     class Meta:
-        indexes = [
-            models.Index(fields=["latitude", "longitude"], name="core_charger_lat_lng_idx"),
-            models.Index(fields=["region_id", "postcode"], name="core_charger_reg_pcode_idx"),
-        ]
-
-    def save(self, *args, **kwargs):
-        self.postcode = normalise_postcode(self.postcode)
-        super().save(*args, **kwargs)
-
-    def __str__(self) -> str:  # pragma: no cover
-        return self.name
+        abstract = True
