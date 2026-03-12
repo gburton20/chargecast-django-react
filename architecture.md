@@ -264,7 +264,137 @@ SUM(kwh where intensity < green_threshold) / SUM(kwh)
 
 ---
 
-## 7️⃣ Roadmap Phases
+## 7️⃣ Charger & Tariff Data Architecture (Phase 3A)
+
+### Purpose
+
+ChargeCast’s operational dashboard includes a charger map and charger-level insights. To support this, the backend needs a charger + tariff data platform that is:
+
+* Multi-provider
+* Idempotent (safe to re-run)
+* Operationally observable (freshness, provenance, and staleness)
+* Resilient to partial upstream failures
+
+---
+
+### Charger + Tariff Data Model (OCPI-Aligned)
+
+Persist an OCPI-like hierarchy:
+
+* ChargerLocation
+* EVSE (per location)
+* Connector (per EVSE)
+* Tariff (separate entity)
+* ConnectorTariff join table (FK to Tariff, not a string tariff_id)
+
+Operational safety fields (critical for ingestion systems):
+
+* source_provider (where the record came from)
+* ingested_at (explicitly updated on every ingestion run)
+* is_active (soft-delete for locations missing from a feed)
+* last_seen_at / is_stale (tariffs only)
+
+---
+
+### Provider Strategy
+
+Provider integrations fall into three buckets:
+
+1. Aggregator API (Eco-Movement PCPR)
+
+   * One shared OCPI surface
+   * Multiple providers (Blink, BP Pulse, Ionity, Shell)
+   * Provider-specific API keys
+
+2. Individual OCPI provider (Fastned)
+
+   * OCPI endpoints
+   * API-key authentication
+   * Standalone reliability profile (must be isolated from aggregator failures)
+
+3. Non-OCPI provider (Motor Fuel Group)
+
+   * Non-OCPI envelope and data shape
+   * Public endpoints (no auth)
+   * Requires extra defensive parsing + rate-limit protection
+
+Char.gy is treated as locations-only (no tariff endpoint), even though it can emit tariff_ids.
+
+---
+
+### Separation of Concerns: Location vs Tariff Ingestion
+
+Charging locations and tariffs evolve on different cadences and have different failure modes.
+
+* Location ingestion owns:
+  * ChargerLocation / EVSE / Connector upserts
+  * Soft-delete (is_active false when locations disappear)
+  * Connector → Tariff ID linkage via ConnectorTariff (only when the Tariff exists)
+
+* Tariff ingestion owns:
+  * Tariff upserts and explicit freshness tracking (ingested_at, last_seen_at)
+  * Handling unreferenced tariffs (store them even if no connector references exist)
+  * Staleness marking is NOT performed here
+
+---
+
+### Canonical Map Output: Pricing + Availability
+
+The frontend should not need provider-specific logic to render charger pricing and availability.
+
+ChargeCast will expose canonical outputs:
+
+* cheapest_price (cheapest connector quote, regardless of operational status)
+* cheapest_available_now (cheapest operationally usable connector quote)
+
+Operationally usable is defined as:
+
+* INCLUDE: AVAILABLE, UNKNOWN
+* EXCLUDE: OUT_OF_ORDER (and other explicitly non-operational statuses)
+
+When a connector/EVSE status is UNKNOWN:
+
+* Treat as usable, but mark availability confidence as LOW
+* Allow the UI to show an amber caution indicator (status uncertain)
+
+Pricing estimates will return:
+
+* a canonical TariffQuote-like output (total cost, breakdown, currency)
+* a confidence level and explicit assumptions when tariff data is incomplete
+
+---
+
+### Stale Tariff Detection
+
+Stale tariffs are expected in real-world provider feeds.
+
+A dedicated stale detection job:
+
+* marks Tariff.is_stale = true when last_seen_at is older than threshold (default 7 days)
+* can unmark stale when a tariff is seen again
+* provides operational metrics (counts marked/unmarked)
+
+This is implemented as a separate service + management command to keep ingestion write paths simple.
+
+---
+
+### Scheduling (Render Cron)
+
+To keep the platform current while controlling cost:
+
+* Location ingestion — hourly (high freshness requirement)
+* Tariff ingestion — daily (tariffs change less frequently)
+* Stale detection — daily (after tariff ingestion)
+
+Each job is independently runnable via management command, enabling:
+
+* local testing
+* ad-hoc re-ingestion for debugging
+* clean operational observability in production logs
+
+---
+
+## 8️⃣ Roadmap Phases
 
 ### Phase 1 — Data Models & Migrations
 
@@ -286,13 +416,30 @@ SUM(kwh where intensity < green_threshold) / SUM(kwh)
 
 ---
 
-### Phase 3 — Fleet Upload Engine
+### Phase 3A — Charger Data and Tariff Foundations
 
-* CSV validation
-* Lenient row handling
-* Bulk insert
-* Fallback tracking
-* Batch summary
+* Charger, EVSE, Connector, Tariff, ConnectorTariff models (OCPI-aligned)
+* Provider API clients (Eco-Movement, Fastned, Char.gy, MFG)
+* Multi-provider location ingestion orchestration (idempotent + soft-delete)
+* Separate tariff ingestion orchestration (explicit last_seen_at + ingested_at tracking)
+* Stale tariff detection service + management command
+* Render cron scheduling (hourly locations, daily tariffs, daily stale detection)
+* Comprehensive ingestion test suite with fixture provider responses
+* Canonical charger map pricing/availability outputs (cheapest vs available-now + confidence)
+
+---
+
+### Phase 3B — Fleet Upload Engine
+
+* CSV schema definition & validation
+* Postcode resolution service (postcode → GSP)
+* Carbon intensity lookup service (local cache first, NESO fallback)
+* Django-RQ background task orchestration for uploads
+* CSV parser + row processing (postcode + carbon enrichment)
+* Upload API endpoint (multipart/form-data + validation + rate limits)
+* Batch status API endpoint
+* Batch summary + metrics calculation endpoint
+* Comprehensive upload engine test suite with fixture CSVs
 
 ---
 
