@@ -1,0 +1,1371 @@
+{
+    "timestamp": "2026-03-12T06:24:10Z",
+    "status_code": 1000,
+    "status_message": "Success",
+    "data": [
+        {
+            "party_id": "BPC",
+            "id": "3843",
+            "country_code": "GB",
+            "publish": true,
+            "country": "GBR",
+            "address": "Rhinefield House Hotel, Rhinefield Road",
+            "city": "Brockenhurst",
+            "postal_code": "SO42 7QB",
+            "coordinates": {
+                "latitude": "50.83199300",
+                "longitude": "-1.62449200"
+            },
+            "state": null,
+            "last_updated": "2026-03-11T17:43:35Z",
+            "opening_times": null,
+            "name": "Rhinefield House Hotel",
+            "time_zone": "UTC",
+            "owner": {
+                "name": "bp pulse",
+                "website": "https://www.bppulse.co.uk/"
+            },
+            "operator": {
+                "name": "bp pulse",
+                "website": "https://www.bppulse.co.uk/"
+            },
+            "energy_mix": null,
+            "charging_when_closed": false,
+            "directions": null,
+            "evses": [
+                {
+                    "uid": "24183-1",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T17:43:35Z",
+                    "evse_id": "GB*BPC*E590971",
+                    "physical_reference": "24183",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "64284",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T23:30:51Z",
+                            "max_amperage": 125,
+                            "max_voltage": 400,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "93"
+                            ]
+                        },
+                        {
+                            "id": "64286",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_3_PHASE",
+                            "last_updated": "2026-03-10T23:30:51Z",
+                            "max_amperage": 63,
+                            "max_voltage": 400,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "92"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BPC",
+            "id": "6589af79-5984-4268-8446-93b4548ae33f",
+            "country_code": "GB",
+            "publish": true,
+            "country": "GBR",
+            "address": "Summerland Gardens Car Park Summerland Garden",
+            "city": "London",
+            "postal_code": "N10 3QP",
+            "coordinates": {
+                "latitude": "51.58985000",
+                "longitude": "-0.14194100"
+            },
+            "state": null,
+            "last_updated": "2026-03-12T05:05:04Z",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "name": "Summerland Gardens Car Park",
+            "time_zone": "Europe/London",
+            "owner": {
+                "name": "bp pulse",
+                "website": "https://www.bppulse.co.uk/"
+            },
+            "operator": {
+                "name": "bp pulse",
+                "website": "https://www.bppulse.co.uk/"
+            },
+            "suboperator": {
+                "name": "bp pulse",
+                "website": "https://www.bppulse.co.uk/"
+            },
+            "energy_mix": null,
+            "charging_when_closed": true,
+            "directions": null,
+            "evses": [
+                {
+                    "uid": "d1ebbfb5-28c3-4080-9b58-e853a38b3543",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-12T05:05:04Z",
+                    "evse_id": "GB*BPP*EBPT31002",
+                    "physical_reference": "BPT310",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "CREDIT_CARD_PAYABLE",
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "d1ebbfb5-28c3-4080-9b58-e853a38b3543",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-02-17T10:39:05Z",
+                            "max_amperage": 100,
+                            "max_voltage": 500,
+                            "max_electric_power": 50000,
+                            "tariff_ids": null
+                        }
+                    ]
+                },
+                {
+                    "uid": "8ec67777-1c98-4024-b240-155a8bb44fa3",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-12T05:05:04Z",
+                    "evse_id": "GB*BPP*EBPT31001",
+                    "physical_reference": "BPT310",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "CREDIT_CARD_PAYABLE",
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "8ec67777-1c98-4024-b240-155a8bb44fa3",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-02-17T10:39:05Z",
+                            "max_amperage": 125,
+                            "max_voltage": 400,
+                            "max_electric_power": 50000,
+                            "tariff_ids": null
+                        }
+                    ]
+                },
+                {
+                    "uid": "93acb405-bd37-48dd-9214-8d2c0898a7ce",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-12T04:49:59Z",
+                    "evse_id": "GB*BPP*EBPT30902",
+                    "physical_reference": "BPT309",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "CREDIT_CARD_PAYABLE",
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "93acb405-bd37-48dd-9214-8d2c0898a7ce",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-02-17T10:51:40Z",
+                            "max_amperage": 100,
+                            "max_voltage": 500,
+                            "max_electric_power": 50000,
+                            "tariff_ids": null
+                        }
+                    ]
+                },
+                {
+                    "uid": "1a5d94c6-6748-430e-9412-8ad72dce67bc",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-12T04:49:59Z",
+                    "evse_id": "GB*BPP*EBPT30901",
+                    "physical_reference": "BPT309",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "CREDIT_CARD_PAYABLE",
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1a5d94c6-6748-430e-9412-8ad72dce67bc",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-02-17T10:51:40Z",
+                            "max_amperage": 125,
+                            "max_voltage": 400,
+                            "max_electric_power": 50000,
+                            "tariff_ids": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BPC",
+            "id": "6426",
+            "country_code": "GB",
+            "publish": true,
+            "country": "GBR",
+            "address": "121-130 Faraday Rd, Lenton",
+            "city": "Nottingham",
+            "postal_code": "NG7 2DU",
+            "coordinates": {
+                "latitude": "52.95394900",
+                "longitude": "-1.18197000"
+            },
+            "state": null,
+            "last_updated": "2026-03-10T23:34:52Z",
+            "opening_times": null,
+            "name": "Faraday Road",
+            "time_zone": "UTC",
+            "owner": {
+                "name": "bp pulse",
+                "website": "https://www.bppulse.co.uk/"
+            },
+            "operator": {
+                "name": "bp pulse",
+                "website": "https://www.bppulse.co.uk/"
+            },
+            "energy_mix": null,
+            "charging_when_closed": false,
+            "directions": null,
+            "evses": [
+                {
+                    "uid": "24848-1",
+                    "status": "OUTOFORDER",
+                    "last_updated": "2026-02-10T14:35:10Z",
+                    "evse_id": "GB*BPC*E812781",
+                    "physical_reference": "24848",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "90920",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T23:34:52Z",
+                            "max_amperage": 125,
+                            "max_voltage": 400,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "93"
+                            ]
+                        },
+                        {
+                            "id": "90921",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T23:34:52Z",
+                            "max_amperage": 125,
+                            "max_voltage": 400,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "93"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BPC",
+            "id": "5740",
+            "country_code": "GB",
+            "publish": true,
+            "country": "GBR",
+            "address": "Royal Oak Hotel, Holyhead Road",
+            "city": "Betws-Y-Coed",
+            "postal_code": "LL24 0AY",
+            "coordinates": {
+                "latitude": "53.09207900",
+                "longitude": "-3.80324000"
+            },
+            "state": null,
+            "last_updated": "2026-03-11T20:01:34Z",
+            "opening_times": null,
+            "name": "Royal Oak Hotel",
+            "time_zone": "UTC",
+            "owner": {
+                "name": "bp pulse",
+                "website": "https://www.bppulse.co.uk/"
+            },
+            "operator": {
+                "name": "bp pulse",
+                "website": "https://www.bppulse.co.uk/"
+            },
+            "energy_mix": null,
+            "charging_when_closed": false,
+            "directions": null,
+            "evses": [
+                {
+                    "uid": "24629-1",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T20:01:34Z",
+                    "evse_id": "GB*BPC*E672361",
+                    "physical_reference": "24629",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "74369",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T23:32:26Z",
+                            "max_amperage": 125,
+                            "max_voltage": 400,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "93"
+                            ]
+                        },
+                        {
+                            "id": "74370",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T23:32:26Z",
+                            "max_amperage": 125,
+                            "max_voltage": 400,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "93"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "12716-2",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T17:37:02Z",
+                    "evse_id": "GB*BPC*E1162892",
+                    "physical_reference": "12716",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "133086",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "last_updated": "2026-03-10T23:32:26Z",
+                            "max_amperage": 32,
+                            "max_voltage": 230,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "92"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "12716-1",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T17:35:06Z",
+                    "evse_id": "GB*BPC*E1162891",
+                    "physical_reference": "12716",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "133085",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "last_updated": "2026-03-10T23:32:26Z",
+                            "max_amperage": 32,
+                            "max_voltage": 230,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "92"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BPC",
+            "id": "f534cf03-fa8d-434b-ac98-ec652c7af2c1",
+            "country_code": "GB",
+            "publish": true,
+            "country": "GBR",
+            "address": "31-33 High Street",
+            "city": "Carshalton",
+            "postal_code": "SM5 3AX",
+            "coordinates": {
+                "latitude": "51.36567300",
+                "longitude": "-0.15961500"
+            },
+            "state": null,
+            "last_updated": "2026-03-12T05:28:43Z",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "name": "31-33 High Street",
+            "time_zone": "Europe/London",
+            "owner": {
+                "name": "bp pulse",
+                "website": "https://www.bppulse.co.uk/"
+            },
+            "operator": {
+                "name": "bp pulse",
+                "website": "https://www.bppulse.co.uk/"
+            },
+            "suboperator": {
+                "name": "bp pulse",
+                "website": "https://www.bppulse.co.uk/"
+            },
+            "energy_mix": null,
+            "charging_when_closed": true,
+            "directions": null,
+            "evses": [
+                {
+                    "uid": "bddb50f7-86c6-42b9-9297-7c848d042edf",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-12T05:28:43Z",
+                    "evse_id": "GB*BPP*EBPT60502",
+                    "physical_reference": "BPT605",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "CREDIT_CARD_PAYABLE",
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "bddb50f7-86c6-42b9-9297-7c848d042edf",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-02-15T10:52:42Z",
+                            "max_amperage": 100,
+                            "max_voltage": 500,
+                            "max_electric_power": 50000,
+                            "tariff_ids": null
+                        }
+                    ]
+                },
+                {
+                    "uid": "c70c6fa8-933c-4420-9cd8-ef91dfd9dc4e",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-12T05:28:43Z",
+                    "evse_id": "GB*BPP*EBPT60501",
+                    "physical_reference": "BPT605",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "CREDIT_CARD_PAYABLE",
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "c70c6fa8-933c-4420-9cd8-ef91dfd9dc4e",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-02-15T10:52:42Z",
+                            "max_amperage": 100,
+                            "max_voltage": 500,
+                            "max_electric_power": 50000,
+                            "tariff_ids": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BPC",
+            "id": "5314",
+            "country_code": "GB",
+            "publish": true,
+            "country": "GBR",
+            "address": "Witham Leisure Centre, Spinks Lane",
+            "city": "Witham",
+            "postal_code": "CM8 1EP",
+            "coordinates": {
+                "latitude": "51.79637100",
+                "longitude": "0.63284000"
+            },
+            "state": null,
+            "last_updated": "2026-03-11T16:58:48Z",
+            "opening_times": null,
+            "name": "Witham Leisure Centre",
+            "time_zone": "UTC",
+            "owner": {
+                "name": "bp pulse",
+                "website": "https://www.bppulse.co.uk/"
+            },
+            "operator": {
+                "name": "bp pulse",
+                "website": "https://www.bppulse.co.uk/"
+            },
+            "energy_mix": null,
+            "charging_when_closed": false,
+            "directions": null,
+            "evses": [
+                {
+                    "uid": "12023-1",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T16:58:48Z",
+                    "evse_id": "GB*BPC*E757371",
+                    "physical_reference": "12023",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "84405",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_3_PHASE",
+                            "last_updated": "2026-03-10T23:33:55Z",
+                            "max_amperage": 32,
+                            "max_voltage": 400,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "92"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "12023-2",
+                    "status": "OUTOFORDER",
+                    "last_updated": "2026-03-10T02:59:07Z",
+                    "evse_id": "GB*BPC*E757372",
+                    "physical_reference": "12023",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "84406",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_3_PHASE",
+                            "last_updated": "2026-03-10T23:33:55Z",
+                            "max_amperage": 32,
+                            "max_voltage": 400,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "92"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BPC",
+            "id": "6018",
+            "country_code": "GB",
+            "publish": true,
+            "country": "GBR",
+            "address": "The Cleveland Tontine, Staddlebridge House",
+            "city": "Northallerton",
+            "postal_code": "DL6 3JB",
+            "coordinates": {
+                "latitude": "54.38750500",
+                "longitude": "-1.31820600"
+            },
+            "state": null,
+            "last_updated": "2026-03-10T23:34:48Z",
+            "opening_times": null,
+            "name": "The Cleveland Tontine",
+            "time_zone": "UTC",
+            "owner": {
+                "name": "bp pulse",
+                "website": "https://www.bppulse.co.uk/"
+            },
+            "operator": {
+                "name": "bp pulse",
+                "website": "https://www.bppulse.co.uk/"
+            },
+            "energy_mix": null,
+            "charging_when_closed": false,
+            "directions": null,
+            "evses": [
+                {
+                    "uid": "24814-1",
+                    "status": "CHARGING",
+                    "last_updated": "2026-03-09T13:54:55Z",
+                    "evse_id": "GB*BPC*E812441",
+                    "physical_reference": "24814",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "90818",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T23:34:48Z",
+                            "max_amperage": 125,
+                            "max_voltage": 400,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "93"
+                            ]
+                        },
+                        {
+                            "id": "90819",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T23:34:48Z",
+                            "max_amperage": 125,
+                            "max_voltage": 400,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "93"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BPC",
+            "id": "9761",
+            "country_code": "GB",
+            "publish": true,
+            "country": "GBR",
+            "address": "Bank Street",
+            "city": "Coatbridge",
+            "postal_code": "ML5 1EG",
+            "coordinates": {
+                "latitude": "55.85747900",
+                "longitude": "-4.04552800"
+            },
+            "state": null,
+            "last_updated": "2026-03-11T12:35:54Z",
+            "opening_times": null,
+            "name": "Bank Street",
+            "time_zone": "UTC",
+            "owner": {
+                "name": "bp pulse",
+                "website": "https://www.bppulse.co.uk/"
+            },
+            "operator": {
+                "name": "bp pulse",
+                "website": "https://www.bppulse.co.uk/"
+            },
+            "energy_mix": null,
+            "charging_when_closed": false,
+            "directions": null,
+            "evses": [
+                {
+                    "uid": "BPG000461-1",
+                    "status": "BLOCKED",
+                    "last_updated": "2026-03-11T12:35:53Z",
+                    "evse_id": "GB*BPC*E1227221",
+                    "physical_reference": "BPG000461",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "142510",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T23:40:54Z",
+                            "max_amperage": 300,
+                            "max_voltage": 500,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "94"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "BPG000461-2",
+                    "status": "BLOCKED",
+                    "last_updated": "2026-03-11T12:35:54Z",
+                    "evse_id": "GB*BPC*E1227222",
+                    "physical_reference": "BPG000461",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "142511",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T23:40:54Z",
+                            "max_amperage": 300,
+                            "max_voltage": 500,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "94"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "BPG000464-1",
+                    "status": "OUTOFORDER",
+                    "last_updated": "2026-01-16T17:39:45Z",
+                    "evse_id": "GB*BPC*E1227231",
+                    "physical_reference": "BPG000464",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "142512",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T23:40:54Z",
+                            "max_amperage": 300,
+                            "max_voltage": 500,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "94"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "BPG000464-2",
+                    "status": "OUTOFORDER",
+                    "last_updated": "2026-01-16T17:39:45Z",
+                    "evse_id": "GB*BPC*E1227232",
+                    "physical_reference": "BPG000464",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "142513",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T23:40:54Z",
+                            "max_amperage": 300,
+                            "max_voltage": 500,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "94"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BPC",
+            "id": "8575",
+            "country_code": "GB",
+            "publish": true,
+            "country": "GBR",
+            "address": "Harlow Council, Garden Terrace Road Car Park",
+            "city": "Harlow",
+            "postal_code": "CM17 0AT",
+            "coordinates": {
+                "latitude": "51.78421000",
+                "longitude": "0.13474100"
+            },
+            "state": null,
+            "last_updated": "2026-03-11T23:45:37Z",
+            "opening_times": null,
+            "name": "Harlow Council",
+            "time_zone": "UTC",
+            "owner": {
+                "name": "bp pulse",
+                "website": "https://www.bppulse.co.uk/"
+            },
+            "operator": {
+                "name": "bp pulse",
+                "website": "https://www.bppulse.co.uk/"
+            },
+            "energy_mix": null,
+            "charging_when_closed": false,
+            "directions": null,
+            "evses": [
+                {
+                    "uid": "FC18969-2",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-10T09:54:56Z",
+                    "evse_id": "GB*BPC*E1220652",
+                    "physical_reference": "FC18969",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "141401",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "last_updated": "2026-03-10T23:39:58Z",
+                            "max_amperage": 32,
+                            "max_voltage": 230,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "92"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "FC18869-1",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T23:45:37Z",
+                    "evse_id": "GB*BPC*E1203371",
+                    "physical_reference": "FC18869",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "139440",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "last_updated": "2026-03-10T23:39:58Z",
+                            "max_amperage": 32,
+                            "max_voltage": 230,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "92"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "FC18869-2",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T23:45:37Z",
+                    "evse_id": "GB*BPC*E1203372",
+                    "physical_reference": "FC18869",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "139441",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "last_updated": "2026-03-10T23:39:58Z",
+                            "max_amperage": 32,
+                            "max_voltage": 230,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "92"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "FC18965-1",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-09T20:26:08Z",
+                    "evse_id": "GB*BPC*E1220611",
+                    "physical_reference": "FC18965",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "141392",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "last_updated": "2026-03-10T23:39:58Z",
+                            "max_amperage": 32,
+                            "max_voltage": 230,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "92"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "FC18965-2",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-09T10:14:29Z",
+                    "evse_id": "GB*BPC*E1220612",
+                    "physical_reference": "FC18965",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "141393",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "last_updated": "2026-03-10T23:39:58Z",
+                            "max_amperage": 32,
+                            "max_voltage": 230,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "92"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "FC18967-1",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-08T15:15:30Z",
+                    "evse_id": "GB*BPC*E1220631",
+                    "physical_reference": "FC18967",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "141396",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "last_updated": "2026-03-10T23:39:58Z",
+                            "max_amperage": 32,
+                            "max_voltage": 230,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "92"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "FC18967-2",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-04T17:10:53Z",
+                    "evse_id": "GB*BPC*E1220632",
+                    "physical_reference": "FC18967",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "141397",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "last_updated": "2026-03-10T23:39:58Z",
+                            "max_amperage": 32,
+                            "max_voltage": 230,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "92"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "FC18969-1",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-09T08:03:30Z",
+                    "evse_id": "GB*BPC*E1220651",
+                    "physical_reference": "FC18969",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "141400",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "last_updated": "2026-03-10T23:39:58Z",
+                            "max_amperage": 32,
+                            "max_voltage": 230,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "92"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BPC",
+            "id": "7838",
+            "country_code": "GB",
+            "publish": true,
+            "country": "GBR",
+            "address": "Fanhams Hall Hotel, Fanhams Hall Road",
+            "city": "Ware",
+            "postal_code": "SG12 7PZ",
+            "coordinates": {
+                "latitude": "51.82266600",
+                "longitude": "-0.01122300"
+            },
+            "state": null,
+            "last_updated": "2026-03-11T21:37:28Z",
+            "opening_times": null,
+            "name": "Fanhams Hall Hotel",
+            "time_zone": "UTC",
+            "owner": {
+                "name": "bp pulse",
+                "website": "https://www.bppulse.co.uk/"
+            },
+            "operator": {
+                "name": "bp pulse",
+                "website": "https://www.bppulse.co.uk/"
+            },
+            "energy_mix": null,
+            "charging_when_closed": false,
+            "directions": null,
+            "evses": [
+                {
+                    "uid": "FC16999-2",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T21:37:28Z",
+                    "evse_id": "GB*BPC*E1161312",
+                    "physical_reference": "FC16999",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "132797",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "last_updated": "2026-03-10T23:36:32Z",
+                            "max_amperage": 32,
+                            "max_voltage": 230,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "92"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "UC25202-3",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T17:28:02Z",
+                    "evse_id": "GB*BPC*E927123",
+                    "physical_reference": "UC25202",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "104665",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_3_PHASE",
+                            "last_updated": "2026-03-10T23:36:31Z",
+                            "max_amperage": 63,
+                            "max_voltage": 400,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "93"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "UC25203-3",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T17:20:36Z",
+                    "evse_id": "GB*BPC*E927133",
+                    "physical_reference": "UC25203",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "104668",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_3_PHASE",
+                            "last_updated": "2026-03-10T23:36:32Z",
+                            "max_amperage": 63,
+                            "max_voltage": 400,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "93"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "UC25202-1",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T17:27:03Z",
+                    "evse_id": "GB*BPC*E927121",
+                    "physical_reference": "UC25202",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "104663",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T23:36:31Z",
+                            "max_amperage": 125,
+                            "max_voltage": 400,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "93"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "UC25202-2",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T17:28:02Z",
+                    "evse_id": "GB*BPC*E927122",
+                    "physical_reference": "UC25202",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "104664",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T23:36:31Z",
+                            "max_amperage": 125,
+                            "max_voltage": 400,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "93"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "UC25203-1",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T17:20:36Z",
+                    "evse_id": "GB*BPC*E927131",
+                    "physical_reference": "UC25203",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "104666",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T23:36:31Z",
+                            "max_amperage": 125,
+                            "max_voltage": 400,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "93"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "UC25203-2",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T17:20:36Z",
+                    "evse_id": "GB*BPC*E927132",
+                    "physical_reference": "UC25203",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "104667",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T23:36:31Z",
+                            "max_amperage": 125,
+                            "max_voltage": 400,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "93"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "FC16999-1",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-10T11:59:53Z",
+                    "evse_id": "GB*BPC*E1161311",
+                    "physical_reference": "FC16999",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "RFID_READER"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "132796",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "last_updated": "2026-03-10T23:36:32Z",
+                            "max_amperage": 32,
+                            "max_voltage": 230,
+                            "max_electric_power": 0,
+                            "tariff_ids": [
+                                "92"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

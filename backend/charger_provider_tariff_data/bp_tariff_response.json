@@ -1,0 +1,125 @@
+{
+    "timestamp": "2026-03-12T06:50:04Z",
+    "status_code": 1000,
+    "status_message": "Success",
+    "data": [
+        {
+            "party_id": "BPC",
+            "id": "92",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2026-03-10T23:43:22Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": {
+                        "start_date": "2025-10-23"
+                    },
+                    "price_components": [
+                        {
+                            "type": "ENERGY",
+                            "price": 0.542,
+                            "vat": null,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BPC",
+            "id": "94",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2026-03-10T23:43:22Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": {
+                        "start_date": "2025-10-23"
+                    },
+                    "price_components": [
+                        {
+                            "type": "ENERGY",
+                            "price": 0.742,
+                            "vat": null,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BPC",
+            "id": "93",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2026-03-10T23:43:22Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": {
+                        "start_date": "2025-10-23"
+                    },
+                    "price_components": [
+                        {
+                            "type": "ENERGY",
+                            "price": 0.742,
+                            "vat": null,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BPC",
+            "id": "91",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2026-03-10T23:43:22Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": {
+                        "start_date": "2025-10-23"
+                    },
+                    "price_components": [
+                        {
+                            "type": "ENERGY",
+                            "price": 0.542,
+                            "vat": null,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BPC",
+            "id": "1",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2026-03-10T23:43:22Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

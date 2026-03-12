@@ -1,0 +1,29 @@
+{
+    "data": [
+        {
+            "country_code": "GB",
+            "party_id": "FAS",
+            "id": "678",
+            "currency": "GBP",
+            "elements": [
+                {
+                    "price_components": [
+                        {
+                            "type": "ENERGY",
+                            "price": 0.6583,
+                            "vat": 20.0,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ],
+            "energy_mix": {
+                "is_green_energy": true
+            },
+            "last_updated": "2026-01-19T11:09:59.134Z"
+        }
+    ],
+    "status_code": 1000,
+    "status_message": "Success",
+    "timestamp": "2026-03-12T07:06:20.143Z"
+}

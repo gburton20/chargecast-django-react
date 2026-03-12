@@ -1,0 +1,51 @@
+{
+    "timestamp": "2026-03-12T06:54:09Z",
+    "status_code": 1000,
+    "status_message": "Success",
+    "data": [
+        {
+            "party_id": "IOY",
+            "id": "GB*HPC*ADHOC*003",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2026-01-30T11:09:31Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "ENERGY",
+                            "price": 0.6754,
+                            "vat": 20,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "IOY",
+            "id": "GB*MC*ADHOC*003",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2026-01-30T11:09:55Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "ENERGY",
+                            "price": 0.5005,
+                            "vat": 20,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

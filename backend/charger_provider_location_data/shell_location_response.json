@@ -1,0 +1,2557 @@
+{
+    "timestamp": "2026-03-12T06:25:46Z",
+    "status_code": 1000,
+    "status_message": "Success",
+    "data": [
+        {
+            "party_id": "TNM",
+            "id": "208",
+            "country_code": "GB",
+            "publish": true,
+            "country": "GBR",
+            "address": "Lichfield Road",
+            "city": "Sutton Coldfield",
+            "postal_code": "B74 2XH",
+            "coordinates": {
+                "latitude": "52.58687900",
+                "longitude": "-1.83029700"
+            },
+            "state": null,
+            "last_updated": "2026-03-11T21:19:11Z",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "name": "Shell Recharge Shell Fouroaks",
+            "time_zone": "Europe/London",
+            "owner": {
+                "name": "Shell Recharge",
+                "website": "https://shellrecharge.com/"
+            },
+            "operator": {
+                "name": "Shell Recharge",
+                "website": "https://shellrecharge.com/"
+            },
+            "energy_mix": null,
+            "charging_when_closed": true,
+            "directions": null,
+            "evses": [
+                {
+                    "uid": "TRIT_PKM150_0014",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T21:12:35Z",
+                    "evse_id": "GB*TNM*EGL44*01*1240*01",
+                    "physical_reference": "01",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1359",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:31:26Z",
+                            "max_amperage": 300,
+                            "max_voltage": 500,
+                            "max_electric_power": 150000,
+                            "tariff_ids": [
+                                "PP358282115_7"
+                            ]
+                        },
+                        {
+                            "id": "1358",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:31:26Z",
+                            "max_amperage": 175,
+                            "max_voltage": 400,
+                            "max_electric_power": 70000,
+                            "tariff_ids": [
+                                "PP358282115_2"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "TRIT_PKM150_0015",
+                    "status": "UNKNOWN",
+                    "last_updated": "2026-03-10T21:31:26Z",
+                    "evse_id": "GB*TNM*EGL44*01*1240*02",
+                    "physical_reference": "02",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1361",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:31:26Z",
+                            "max_amperage": 300,
+                            "max_voltage": 500,
+                            "max_electric_power": 150000,
+                            "tariff_ids": [
+                                "PP358282115_7"
+                            ]
+                        },
+                        {
+                            "id": "1360",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:31:26Z",
+                            "max_amperage": 175,
+                            "max_voltage": 400,
+                            "max_electric_power": 70000,
+                            "tariff_ids": [
+                                "PP358282115_2"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "TRIT_PKM150_0016",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T21:19:11Z",
+                    "evse_id": "GB*TNM*EGL44*01*1240*03",
+                    "physical_reference": "03",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1362",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:31:26Z",
+                            "max_amperage": 175,
+                            "max_voltage": 400,
+                            "max_electric_power": 70000,
+                            "tariff_ids": [
+                                "PP358282115_2"
+                            ]
+                        },
+                        {
+                            "id": "1363",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:31:26Z",
+                            "max_amperage": 300,
+                            "max_voltage": 500,
+                            "max_electric_power": 150000,
+                            "tariff_ids": [
+                                "PP358282115_7"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "TRIT_PKM150_0017",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T20:46:20Z",
+                    "evse_id": "GB*TNM*EGL44*01*1240*04",
+                    "physical_reference": "04",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1364",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:31:26Z",
+                            "max_amperage": 175,
+                            "max_voltage": 400,
+                            "max_electric_power": 70000,
+                            "tariff_ids": [
+                                "PP358282115_2"
+                            ]
+                        },
+                        {
+                            "id": "1365",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:31:26Z",
+                            "max_amperage": 300,
+                            "max_voltage": 500,
+                            "max_electric_power": 150000,
+                            "tariff_ids": [
+                                "PP358282115_7"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "TNM",
+            "id": "143",
+            "country_code": "GB",
+            "publish": true,
+            "country": "GBR",
+            "address": "123-127 PORTLAND ROAD",
+            "city": "London",
+            "postal_code": "SE25 4UX",
+            "coordinates": {
+                "latitude": "51.39655500",
+                "longitude": "-0.06926000"
+            },
+            "state": null,
+            "last_updated": "2026-03-12T06:06:50Z",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "name": "Shell Recharge Shell South Norwood",
+            "time_zone": "Europe/London",
+            "owner": {
+                "name": "Shell Recharge",
+                "website": "https://shellrecharge.com/"
+            },
+            "operator": {
+                "name": "Shell Recharge",
+                "website": "https://shellrecharge.com/"
+            },
+            "energy_mix": null,
+            "charging_when_closed": true,
+            "directions": [
+                {
+                    "language": "en",
+                    "text": "Shell Forecourt"
+                }
+            ],
+            "evses": [
+                {
+                    "uid": "TRIT_PK_00090-5",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-12T02:14:28Z",
+                    "evse_id": "GB*TNM*EGL44*01*0403*02*5",
+                    "physical_reference": "02-5",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "919",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:30:43Z",
+                            "max_amperage": 175,
+                            "max_voltage": 400,
+                            "max_electric_power": 70000,
+                            "tariff_ids": [
+                                "PP358281464_2"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "TRIT_PK_00090-6",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-12T02:14:30Z",
+                    "evse_id": "GB*TNM*EGL44*01*0403*02*6",
+                    "physical_reference": "02-6",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "920",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:30:43Z",
+                            "max_amperage": 350,
+                            "max_voltage": 500,
+                            "max_electric_power": 175000,
+                            "tariff_ids": [
+                                "PP358281464_3"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "c1c769d58e9c4d0abdc7fb9e02f22e24",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T20:12:56Z",
+                    "evse_id": "GB*TNM*EGL44*01*0403*01",
+                    "physical_reference": "01",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "2312",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:30:42Z",
+                            "max_amperage": 300,
+                            "max_voltage": 600,
+                            "max_electric_power": 180000,
+                            "tariff_ids": [
+                                "PP358281464_6"
+                            ]
+                        },
+                        {
+                            "id": "2313",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:30:42Z",
+                            "max_amperage": 150,
+                            "max_voltage": 400,
+                            "max_electric_power": 60000,
+                            "tariff_ids": [
+                                "PP358281464_11"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "TRIT_PK_00090-1",
+                    "status": "OUTOFORDER",
+                    "last_updated": "2026-03-12T00:42:26Z",
+                    "evse_id": "GB*TNM*EGL44*01*0403*02*1",
+                    "physical_reference": "02-1",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "915",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:30:42Z",
+                            "max_amperage": 175,
+                            "max_voltage": 400,
+                            "max_electric_power": 70000,
+                            "tariff_ids": [
+                                "PP358281464_2"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "TRIT_PK_00090-2",
+                    "status": "OUTOFORDER",
+                    "last_updated": "2026-03-12T00:42:27Z",
+                    "evse_id": "GB*TNM*EGL44*01*0403*02*2",
+                    "physical_reference": "02-2",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "916",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:30:42Z",
+                            "max_amperage": 350,
+                            "max_voltage": 500,
+                            "max_electric_power": 175000,
+                            "tariff_ids": [
+                                "PP358281464_3"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "TRIT_PK_00090-3",
+                    "status": "BLOCKED",
+                    "last_updated": "2026-03-12T06:06:28Z",
+                    "evse_id": "GB*TNM*EGL44*01*0403*02*3",
+                    "physical_reference": "02-3",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "917",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:30:42Z",
+                            "max_amperage": 175,
+                            "max_voltage": 400,
+                            "max_electric_power": 70000,
+                            "tariff_ids": [
+                                "PP358281464_2"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "TRIT_PK_00090-4",
+                    "status": "CHARGING",
+                    "last_updated": "2026-03-12T06:06:50Z",
+                    "evse_id": "GB*TNM*EGL44*01*0403*02*4",
+                    "physical_reference": "02-4",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "918",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:30:42Z",
+                            "max_amperage": 350,
+                            "max_voltage": 500,
+                            "max_electric_power": 175000,
+                            "tariff_ids": [
+                                "PP358281464_3"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "TNM",
+            "id": "222",
+            "country_code": "GB",
+            "publish": true,
+            "country": "GBR",
+            "address": "Main Rd, Biggin Hill",
+            "city": "Westerham",
+            "postal_code": "TN16 3BB",
+            "coordinates": {
+                "latitude": "51.30875000",
+                "longitude": "0.03619400"
+            },
+            "state": null,
+            "last_updated": "2026-03-11T20:22:32Z",
+            "opening_times": {
+                "regular_hours": [
+                    {
+                        "period_begin": "07:30",
+                        "period_end": "20:00",
+                        "weekday": 1
+                    },
+                    {
+                        "period_begin": "07:30",
+                        "period_end": "20:00",
+                        "weekday": 2
+                    },
+                    {
+                        "period_begin": "07:30",
+                        "period_end": "20:00",
+                        "weekday": 3
+                    },
+                    {
+                        "period_begin": "07:30",
+                        "period_end": "20:00",
+                        "weekday": 4
+                    },
+                    {
+                        "period_begin": "07:30",
+                        "period_end": "20:00",
+                        "weekday": 5
+                    },
+                    {
+                        "period_begin": "07:30",
+                        "period_end": "20:00",
+                        "weekday": 6
+                    },
+                    {
+                        "period_begin": "10:00",
+                        "period_end": "16:00",
+                        "weekday": 7
+                    }
+                ],
+                "twentyfourseven": false
+            },
+            "name": "Shell Recharge EV Waitrose - Biggin Hill",
+            "time_zone": "Europe/London",
+            "owner": {
+                "name": "Shell Recharge",
+                "website": "https://shellrecharge.com/"
+            },
+            "operator": {
+                "name": "Shell Recharge",
+                "website": "https://shellrecharge.com/"
+            },
+            "energy_mix": null,
+            "charging_when_closed": true,
+            "directions": null,
+            "evses": [
+                {
+                    "uid": "44_SATURN_22_007-1",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T16:22:41Z",
+                    "evse_id": "GB*TNM*EGL44*SATURN*22*007*1",
+                    "physical_reference": "44_SATURN_22_007",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1233",
+                            "standard": "IEC_62196_T2",
+                            "format": "CABLE",
+                            "power_type": "AC_3_PHASE",
+                            "last_updated": "2026-03-10T21:31:37Z",
+                            "max_amperage": 32,
+                            "max_voltage": 230,
+                            "max_electric_power": 7360,
+                            "tariff_ids": [
+                                "PP358281771_8"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "44_SATURN_22_007-2",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T16:23:25Z",
+                    "evse_id": "GB*TNM*EGL44*SATURN*22*007*2",
+                    "physical_reference": "44_SATURN_22_007",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1234",
+                            "standard": "IEC_62196_T2",
+                            "format": "CABLE",
+                            "power_type": "AC_3_PHASE",
+                            "last_updated": "2026-03-10T21:31:38Z",
+                            "max_amperage": 32,
+                            "max_voltage": 230,
+                            "max_electric_power": 7360,
+                            "tariff_ids": [
+                                "PP358281771_8"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "44_SATURN_22_008-1",
+                    "status": "UNKNOWN",
+                    "last_updated": "2026-03-10T21:31:38Z",
+                    "evse_id": "GB*TNM*EGL44*SATURN*22*008*1",
+                    "physical_reference": "44_SATURN_22_008",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1235",
+                            "standard": "IEC_62196_T2",
+                            "format": "CABLE",
+                            "power_type": "AC_3_PHASE",
+                            "last_updated": "2026-03-10T21:31:38Z",
+                            "max_amperage": 32,
+                            "max_voltage": 230,
+                            "max_electric_power": 7360,
+                            "tariff_ids": [
+                                "PP358281771_8"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "44_SATURN_22_008-2",
+                    "status": "UNKNOWN",
+                    "last_updated": "2026-03-10T21:31:38Z",
+                    "evse_id": "GB*TNM*EGL44*SATURN*22*008*2",
+                    "physical_reference": "44_SATURN_22_008",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1236",
+                            "standard": "IEC_62196_T2",
+                            "format": "CABLE",
+                            "power_type": "AC_3_PHASE",
+                            "last_updated": "2026-03-10T21:31:38Z",
+                            "max_amperage": 32,
+                            "max_voltage": 230,
+                            "max_electric_power": 7360,
+                            "tariff_ids": [
+                                "PP358281771_8"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "44_SATURN_22_009-1",
+                    "status": "UNKNOWN",
+                    "last_updated": "2026-03-10T21:31:38Z",
+                    "evse_id": "GB*TNM*EGL44*SATURN*22*009*1",
+                    "physical_reference": "44_SATURN_22_009",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1237",
+                            "standard": "IEC_62196_T2",
+                            "format": "CABLE",
+                            "power_type": "AC_3_PHASE",
+                            "last_updated": "2026-03-10T21:31:38Z",
+                            "max_amperage": 32,
+                            "max_voltage": 230,
+                            "max_electric_power": 7360,
+                            "tariff_ids": [
+                                "PP358281771_8"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "44_SATURN_22_009-2",
+                    "status": "UNKNOWN",
+                    "last_updated": "2026-03-10T21:31:38Z",
+                    "evse_id": "GB*TNM*EGL44*SATURN*22*009*2",
+                    "physical_reference": "44_SATURN_22_009",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1238",
+                            "standard": "IEC_62196_T2",
+                            "format": "CABLE",
+                            "power_type": "AC_3_PHASE",
+                            "last_updated": "2026-03-10T21:31:38Z",
+                            "max_amperage": 32,
+                            "max_voltage": 230,
+                            "max_electric_power": 7360,
+                            "tariff_ids": [
+                                "PP358281771_8"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "TERRA_124_013-1",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T20:22:32Z",
+                    "evse_id": "GB*TNM*EGL44*03*2912*01*1",
+                    "physical_reference": "01-1",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "68850",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:31:37Z",
+                            "max_amperage": 200,
+                            "max_voltage": 600,
+                            "max_electric_power": 120000,
+                            "tariff_ids": [
+                                "PP358281795_29"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "TERRA_124_013-2",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-06T05:11:26Z",
+                    "evse_id": "GB*TNM*EGL44*03*2912*01*2",
+                    "physical_reference": "01-2",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "68851",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:31:37Z",
+                            "max_amperage": 150,
+                            "max_voltage": 400,
+                            "max_electric_power": 60000,
+                            "tariff_ids": [
+                                "PP358281795_11"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "TNM",
+            "id": "5089",
+            "country_code": "GB",
+            "publish": true,
+            "country": "GBR",
+            "address": "St Albans Rd",
+            "city": "Watford",
+            "postal_code": "WD24 7RU",
+            "coordinates": {
+                "latitude": "51.68156400",
+                "longitude": "-0.39344800"
+            },
+            "state": null,
+            "last_updated": "2026-03-12T06:08:52Z",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "name": "Shell Recharge Shell Little Waitrose Sceptre",
+            "time_zone": "Europe/London",
+            "owner": {
+                "name": "Shell Recharge",
+                "website": "https://shellrecharge.com/"
+            },
+            "operator": {
+                "name": "Shell Recharge",
+                "website": "https://shellrecharge.com/"
+            },
+            "energy_mix": null,
+            "charging_when_closed": true,
+            "directions": null,
+            "evses": [
+                {
+                    "uid": "3e4d5e10aa344fbd982636e850bd34d6-2",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T16:24:54Z",
+                    "evse_id": "GB*TNM*EGL44*01*2048*04*2",
+                    "physical_reference": "04-2",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "69377",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:35:34Z",
+                            "max_amperage": 125,
+                            "max_voltage": 500,
+                            "max_electric_power": 62500,
+                            "tariff_ids": [
+                                "PP358281773_16"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "57c7893d5d74426b8c1c563ee5b75e22-1",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-12T06:08:52Z",
+                    "evse_id": "GB*TNM*EGL44*01*2048*01*1",
+                    "physical_reference": "01-1",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "69367",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:35:33Z",
+                            "max_amperage": 500,
+                            "max_voltage": 600,
+                            "max_electric_power": 300000,
+                            "tariff_ids": [
+                                "PP358281773_18"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "57c7893d5d74426b8c1c563ee5b75e22-2",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T19:35:30Z",
+                    "evse_id": "GB*TNM*EGL44*01*2048*01*2",
+                    "physical_reference": "01-2",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "69368",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:35:33Z",
+                            "max_amperage": 125,
+                            "max_voltage": 500,
+                            "max_electric_power": 62500,
+                            "tariff_ids": [
+                                "PP358281773_16"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "f0f07742a9e54f39bab02800e902f88f-2",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T17:17:27Z",
+                    "evse_id": "GB*TNM*EGL44*01*2048*02*2",
+                    "physical_reference": "02-2",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "69371",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:35:33Z",
+                            "max_amperage": 125,
+                            "max_voltage": 500,
+                            "max_electric_power": 62500,
+                            "tariff_ids": [
+                                "PP358281773_16"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "bf99fa1e04f14ea1b4e348228e1dc613-1",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-12T05:59:38Z",
+                    "evse_id": "GB*TNM*EGL44*01*2048*03*1",
+                    "physical_reference": "03-1",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "69373",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:35:34Z",
+                            "max_amperage": 500,
+                            "max_voltage": 600,
+                            "max_electric_power": 300000,
+                            "tariff_ids": [
+                                "PP358281773_18"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "3e4d5e10aa344fbd982636e850bd34d6-1",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T17:54:25Z",
+                    "evse_id": "GB*TNM*EGL44*01*2048*04*1",
+                    "physical_reference": "04-1",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "69376",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:35:34Z",
+                            "max_amperage": 500,
+                            "max_voltage": 600,
+                            "max_electric_power": 300000,
+                            "tariff_ids": [
+                                "PP358281773_18"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "3e4d5e10aa344fbd982636e850bd34d6-3",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T20:27:57Z",
+                    "evse_id": "GB*TNM*EGL44*01*2048*04*3",
+                    "physical_reference": "04-3",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "69378",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:35:34Z",
+                            "max_amperage": 500,
+                            "max_voltage": 600,
+                            "max_electric_power": 300000,
+                            "tariff_ids": [
+                                "PP358281773_18"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "57c7893d5d74426b8c1c563ee5b75e22-3",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-12T01:45:41Z",
+                    "evse_id": "GB*TNM*EGL44*01*2048*01*3",
+                    "physical_reference": "01-3",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "69369",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:35:33Z",
+                            "max_amperage": 500,
+                            "max_voltage": 600,
+                            "max_electric_power": 300000,
+                            "tariff_ids": [
+                                "PP358281773_18"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "f0f07742a9e54f39bab02800e902f88f-1",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-12T00:18:34Z",
+                    "evse_id": "GB*TNM*EGL44*01*2048*02*1",
+                    "physical_reference": "02-1",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "69370",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:35:33Z",
+                            "max_amperage": 500,
+                            "max_voltage": 600,
+                            "max_electric_power": 300000,
+                            "tariff_ids": [
+                                "PP358281773_18"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "f0f07742a9e54f39bab02800e902f88f-3",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-12T00:50:30Z",
+                    "evse_id": "GB*TNM*EGL44*01*2048*02*3",
+                    "physical_reference": "02-3",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "69372",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:35:34Z",
+                            "max_amperage": 500,
+                            "max_voltage": 600,
+                            "max_electric_power": 300000,
+                            "tariff_ids": [
+                                "PP358281773_18"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "bf99fa1e04f14ea1b4e348228e1dc613-2",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T17:29:08Z",
+                    "evse_id": "GB*TNM*EGL44*01*2048*03*2",
+                    "physical_reference": "03-2",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "69374",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:35:34Z",
+                            "max_amperage": 125,
+                            "max_voltage": 500,
+                            "max_electric_power": 62500,
+                            "tariff_ids": [
+                                "PP358281773_16"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "bf99fa1e04f14ea1b4e348228e1dc613-3",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T19:30:48Z",
+                    "evse_id": "GB*TNM*EGL44*01*2048*03*3",
+                    "physical_reference": "03-3",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "69375",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:35:34Z",
+                            "max_amperage": 500,
+                            "max_voltage": 600,
+                            "max_electric_power": 300000,
+                            "tariff_ids": [
+                                "PP358281773_18"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "TNM",
+            "id": "5219",
+            "country_code": "GB",
+            "publish": true,
+            "country": "GBR",
+            "address": "Conway Road",
+            "city": "Conwy",
+            "postal_code": "LL28 5LE",
+            "coordinates": {
+                "latitude": "53.27896400",
+                "longitude": "-3.79128000"
+            },
+            "state": null,
+            "last_updated": "2026-03-11T19:39:36Z",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "name": "Shell Recharge Shell Black Cat",
+            "time_zone": "Europe/London",
+            "owner": {
+                "name": "Shell Recharge",
+                "website": "https://shellrecharge.com/"
+            },
+            "operator": {
+                "name": "Shell Recharge",
+                "website": "https://shellrecharge.com/"
+            },
+            "energy_mix": null,
+            "charging_when_closed": true,
+            "directions": null,
+            "evses": [
+                {
+                    "uid": "0ab79fbd3279429aa7a4f238512f059a-2",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T16:39:07Z",
+                    "evse_id": "GB*TNM*EGL44*01*0974*01*2",
+                    "physical_reference": "01-2",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "70090",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:36:53Z",
+                            "max_amperage": 300,
+                            "max_voltage": 500,
+                            "max_electric_power": 150000,
+                            "tariff_ids": [
+                                "PP358281515_7"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "0673e4bf06134f9eb80cd4411ad3d1c9-1",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T19:39:36Z",
+                    "evse_id": "GB*TNM*EGL44*01*0974*02*1",
+                    "physical_reference": "02-1",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "70091",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:36:53Z",
+                            "max_amperage": 300,
+                            "max_voltage": 500,
+                            "max_electric_power": 150000,
+                            "tariff_ids": [
+                                "PP358281515_7"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "0673e4bf06134f9eb80cd4411ad3d1c9-2",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T17:49:27Z",
+                    "evse_id": "GB*TNM*EGL44*01*0974*02*2",
+                    "physical_reference": "02-2",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "70092",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:36:53Z",
+                            "max_amperage": 300,
+                            "max_voltage": 500,
+                            "max_electric_power": 150000,
+                            "tariff_ids": [
+                                "PP358281515_7"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "0ab79fbd3279429aa7a4f238512f059a-1",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T18:36:44Z",
+                    "evse_id": "GB*TNM*EGL44*01*0974*01*1",
+                    "physical_reference": "01-1",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "70089",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:36:53Z",
+                            "max_amperage": 300,
+                            "max_voltage": 500,
+                            "max_electric_power": 150000,
+                            "tariff_ids": [
+                                "PP358281515_7"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "TNM",
+            "id": "263",
+            "country_code": "GB",
+            "publish": true,
+            "country": "GBR",
+            "address": "Shell Barnet Way",
+            "city": "London",
+            "postal_code": "NW7 3ET",
+            "coordinates": {
+                "latitude": "51.62197200",
+                "longitude": "-0.25568500"
+            },
+            "state": null,
+            "last_updated": "2026-03-12T06:21:21Z",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "name": "Shell Recharge Shell Mill Hill",
+            "time_zone": "Europe/London",
+            "owner": {
+                "name": "Shell Recharge",
+                "website": "https://shellrecharge.com/"
+            },
+            "operator": {
+                "name": "Shell Recharge",
+                "website": "https://shellrecharge.com/"
+            },
+            "energy_mix": null,
+            "charging_when_closed": true,
+            "directions": null,
+            "evses": [
+                {
+                    "uid": "TRIT_PK_00159-10",
+                    "status": "OUTOFORDER",
+                    "last_updated": "2026-03-11T16:33:22Z",
+                    "evse_id": "GB*TNM*EGL44*01*1155*01*10",
+                    "physical_reference": "01-10",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1956",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:32:02Z",
+                            "max_amperage": 350,
+                            "max_voltage": 500,
+                            "max_electric_power": 175000,
+                            "tariff_ids": [
+                                "PP358281906_3"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "TRIT_PK_00159-11",
+                    "status": "BLOCKED",
+                    "last_updated": "2026-03-11T16:33:24Z",
+                    "evse_id": "GB*TNM*EGL44*01*1155*01*11",
+                    "physical_reference": "01-11",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1957",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:32:03Z",
+                            "max_amperage": 175,
+                            "max_voltage": 400,
+                            "max_electric_power": 70000,
+                            "tariff_ids": [
+                                "PP358281906_2"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "TRIT_PK_00159-12",
+                    "status": "BLOCKED",
+                    "last_updated": "2026-03-11T16:33:28Z",
+                    "evse_id": "GB*TNM*EGL44*01*1155*01*12",
+                    "physical_reference": "01-12",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1958",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:32:03Z",
+                            "max_amperage": 350,
+                            "max_voltage": 500,
+                            "max_electric_power": 175000,
+                            "tariff_ids": [
+                                "PP358281906_3"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "TRIT_PK_00159-3",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-12T05:11:59Z",
+                    "evse_id": "GB*TNM*EGL44*01*1155*01*3",
+                    "physical_reference": "01-3",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1949",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:32:03Z",
+                            "max_amperage": 175,
+                            "max_voltage": 400,
+                            "max_electric_power": 70000,
+                            "tariff_ids": [
+                                "PP358281906_2"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "TRIT_PK_00159-4",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-12T05:11:33Z",
+                    "evse_id": "GB*TNM*EGL44*01*1155*01*4",
+                    "physical_reference": "01-4",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1950",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:32:03Z",
+                            "max_amperage": 350,
+                            "max_voltage": 500,
+                            "max_electric_power": 175000,
+                            "tariff_ids": [
+                                "PP358281906_3"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "TRIT_PK_00159-6",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-12T05:55:13Z",
+                    "evse_id": "GB*TNM*EGL44*01*1155*01*6",
+                    "physical_reference": "01-6",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1952",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:32:03Z",
+                            "max_amperage": 350,
+                            "max_voltage": 500,
+                            "max_electric_power": 175000,
+                            "tariff_ids": [
+                                "PP358281906_3"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "TRIT_PK_00159-7",
+                    "status": "BLOCKED",
+                    "last_updated": "2026-03-12T06:20:53Z",
+                    "evse_id": "GB*TNM*EGL44*01*1155*01*7",
+                    "physical_reference": "01-7",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1953",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:32:03Z",
+                            "max_amperage": 175,
+                            "max_voltage": 400,
+                            "max_electric_power": 70000,
+                            "tariff_ids": [
+                                "PP358281906_2"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "TRIT_PK_00159-8",
+                    "status": "CHARGING",
+                    "last_updated": "2026-03-12T06:21:21Z",
+                    "evse_id": "GB*TNM*EGL44*01*1155*01*8",
+                    "physical_reference": "01-8",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1954",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:32:03Z",
+                            "max_amperage": 350,
+                            "max_voltage": 500,
+                            "max_electric_power": 175000,
+                            "tariff_ids": [
+                                "PP358281906_3"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "TRIT_PK_00159-1",
+                    "status": "OUTOFORDER",
+                    "last_updated": "2026-03-11T16:33:10Z",
+                    "evse_id": "GB*TNM*EGL44*01*1155*01*1",
+                    "physical_reference": "01-1",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1947",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:32:02Z",
+                            "max_amperage": 175,
+                            "max_voltage": 400,
+                            "max_electric_power": 70000,
+                            "tariff_ids": [
+                                "PP358281906_2"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "TRIT_PK_00159-2",
+                    "status": "OUTOFORDER",
+                    "last_updated": "2026-03-11T16:30:09Z",
+                    "evse_id": "GB*TNM*EGL44*01*1155*01*2",
+                    "physical_reference": "01-2",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1948",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:32:03Z",
+                            "max_amperage": 350,
+                            "max_voltage": 500,
+                            "max_electric_power": 175000,
+                            "tariff_ids": [
+                                "PP358281906_3"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "TRIT_PK_00159-5",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-12T05:55:11Z",
+                    "evse_id": "GB*TNM*EGL44*01*1155*01*5",
+                    "physical_reference": "01-5",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1951",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:32:03Z",
+                            "max_amperage": 175,
+                            "max_voltage": 400,
+                            "max_electric_power": 70000,
+                            "tariff_ids": [
+                                "PP358281906_2"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "TRIT_PK_00159-9",
+                    "status": "OUTOFORDER",
+                    "last_updated": "2026-03-11T16:33:20Z",
+                    "evse_id": "GB*TNM*EGL44*01*1155*01*9",
+                    "physical_reference": "01-9",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1955",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:32:03Z",
+                            "max_amperage": 175,
+                            "max_voltage": 400,
+                            "max_electric_power": 70000,
+                            "tariff_ids": [
+                                "PP358281906_2"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "TNM",
+            "id": "5198",
+            "country_code": "GB",
+            "publish": true,
+            "country": "GBR",
+            "address": "Cricklade Road, Cirencester",
+            "city": "Cirencester",
+            "postal_code": "GL7 1NP",
+            "coordinates": {
+                "latitude": "51.70676300",
+                "longitude": "-1.95433700"
+            },
+            "state": null,
+            "last_updated": "2026-03-12T01:28:34Z",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "name": "Shell Recharge EV Aldi Cirencester",
+            "time_zone": "Europe/London",
+            "owner": {
+                "name": "Shell Recharge",
+                "website": "https://shellrecharge.com/"
+            },
+            "operator": {
+                "name": "Shell Recharge",
+                "website": "https://shellrecharge.com/"
+            },
+            "energy_mix": null,
+            "charging_when_closed": true,
+            "directions": null,
+            "evses": [
+                {
+                    "uid": "8e2e7196fc264a4b9a6bef3a2cf76ffb-2",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-12T01:28:34Z",
+                    "evse_id": "GB*TNM*EGL44*03*3094*02*2",
+                    "physical_reference": "02-2",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "69961",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:36:39Z",
+                            "max_amperage": 200,
+                            "max_voltage": 600,
+                            "max_electric_power": 120000,
+                            "tariff_ids": [
+                                "PP358281650_29"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "d289eeb8d29b4246a86e5e41fd583d59-1",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-12T00:01:26Z",
+                    "evse_id": "GB*TNM*EGL44*03*3094*01*1",
+                    "physical_reference": "01-1",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "69958",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:36:39Z",
+                            "max_amperage": 200,
+                            "max_voltage": 600,
+                            "max_electric_power": 120000,
+                            "tariff_ids": [
+                                "PP358281650_29"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "d289eeb8d29b4246a86e5e41fd583d59-2",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T23:49:27Z",
+                    "evse_id": "GB*TNM*EGL44*03*3094*01*2",
+                    "physical_reference": "01-2",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "69959",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:36:39Z",
+                            "max_amperage": 200,
+                            "max_voltage": 600,
+                            "max_electric_power": 120000,
+                            "tariff_ids": [
+                                "PP358281650_29"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "8e2e7196fc264a4b9a6bef3a2cf76ffb-1",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-10T17:36:09Z",
+                    "evse_id": "GB*TNM*EGL44*03*3094*02*1",
+                    "physical_reference": "02-1",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "69960",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:36:39Z",
+                            "max_amperage": 200,
+                            "max_voltage": 600,
+                            "max_electric_power": 120000,
+                            "tariff_ids": [
+                                "PP358281650_29"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "TNM",
+            "id": "664",
+            "country_code": "GB",
+            "publish": true,
+            "country": "GBR",
+            "address": "CARWIN RISE, HAYLE",
+            "city": "Hayle",
+            "postal_code": "TR27 5DG",
+            "coordinates": {
+                "latitude": "50.19840500",
+                "longitude": "-5.39630900"
+            },
+            "state": null,
+            "last_updated": "2026-03-10T21:39:11Z",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "name": "Shell Recharge Shell Hayle",
+            "time_zone": "Europe/London",
+            "owner": {
+                "name": "Shell Recharge",
+                "website": "https://shellrecharge.com/"
+            },
+            "operator": {
+                "name": "Shell Recharge",
+                "website": "https://shellrecharge.com/"
+            },
+            "energy_mix": null,
+            "charging_when_closed": true,
+            "directions": null,
+            "evses": [
+                {
+                    "uid": "235c7f6b59a7473c8e5437f97ba470a9-6",
+                    "status": "UNKNOWN",
+                    "last_updated": "2026-03-10T21:39:10Z",
+                    "evse_id": "GB*TNM*EGLTRIT*PK*00060*6",
+                    "physical_reference": "TRIT_PK_00060-6",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "3073",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:39:10Z",
+                            "max_amperage": 350,
+                            "max_voltage": 500,
+                            "max_electric_power": 175000,
+                            "tariff_ids": [
+                                "PP358281987_3"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "235c7f6b59a7473c8e5437f97ba470a9-7",
+                    "status": "UNKNOWN",
+                    "last_updated": "2026-03-10T21:39:10Z",
+                    "evse_id": "GB*TNM*EGLTRIT*PK*00060*7",
+                    "physical_reference": "TRIT_PK_00060-7",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "3074",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:39:10Z",
+                            "max_amperage": 175,
+                            "max_voltage": 400,
+                            "max_electric_power": 70000,
+                            "tariff_ids": [
+                                "PP358281987_2"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "235c7f6b59a7473c8e5437f97ba470a9-8",
+                    "status": "UNKNOWN",
+                    "last_updated": "2026-03-10T21:39:11Z",
+                    "evse_id": "GB*TNM*EGLTRIT*PK*00060*8",
+                    "physical_reference": "TRIT_PK_00060-8",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "3075",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:39:11Z",
+                            "max_amperage": 350,
+                            "max_voltage": 500,
+                            "max_electric_power": 175000,
+                            "tariff_ids": [
+                                "PP358281987_3"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "235c7f6b59a7473c8e5437f97ba470a9-1",
+                    "status": "UNKNOWN",
+                    "last_updated": "2026-03-10T21:39:10Z",
+                    "evse_id": "GB*TNM*EGLTRIT*PK*00060*1",
+                    "physical_reference": "TRIT_PK_00060-1",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "3068",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:39:10Z",
+                            "max_amperage": 175,
+                            "max_voltage": 400,
+                            "max_electric_power": 70000,
+                            "tariff_ids": [
+                                "PP358281987_2"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "235c7f6b59a7473c8e5437f97ba470a9-2",
+                    "status": "UNKNOWN",
+                    "last_updated": "2026-03-10T21:39:10Z",
+                    "evse_id": "GB*TNM*EGLTRIT*PK*00060*2",
+                    "physical_reference": "TRIT_PK_00060-2",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "3069",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:39:10Z",
+                            "max_amperage": 350,
+                            "max_voltage": 500,
+                            "max_electric_power": 175000,
+                            "tariff_ids": [
+                                "PP358281987_3"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "235c7f6b59a7473c8e5437f97ba470a9-3",
+                    "status": "UNKNOWN",
+                    "last_updated": "2026-03-10T21:39:10Z",
+                    "evse_id": "GB*TNM*EGLTRIT*PK*00060*3",
+                    "physical_reference": "TRIT_PK_00060-3",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "3070",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:39:10Z",
+                            "max_amperage": 175,
+                            "max_voltage": 400,
+                            "max_electric_power": 70000,
+                            "tariff_ids": [
+                                "PP358281987_2"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "235c7f6b59a7473c8e5437f97ba470a9-4",
+                    "status": "UNKNOWN",
+                    "last_updated": "2026-03-10T21:39:10Z",
+                    "evse_id": "GB*TNM*EGLTRIT*PK*00060*4",
+                    "physical_reference": "TRIT_PK_00060-4",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "3071",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:39:10Z",
+                            "max_amperage": 350,
+                            "max_voltage": 500,
+                            "max_electric_power": 175000,
+                            "tariff_ids": [
+                                "PP358281987_3"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "235c7f6b59a7473c8e5437f97ba470a9-5",
+                    "status": "UNKNOWN",
+                    "last_updated": "2026-03-10T21:39:10Z",
+                    "evse_id": "GB*TNM*EGLTRIT*PK*00060*5",
+                    "physical_reference": "TRIT_PK_00060-5",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "3072",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:39:10Z",
+                            "max_amperage": 175,
+                            "max_voltage": 400,
+                            "max_electric_power": 70000,
+                            "tariff_ids": [
+                                "PP358281987_2"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "TNM",
+            "id": "315",
+            "country_code": "GB",
+            "publish": true,
+            "country": "GBR",
+            "address": "Ossington Way, Newark",
+            "city": "Newark",
+            "postal_code": "NG24 1FF",
+            "coordinates": {
+                "latitude": "53.07989600",
+                "longitude": "-0.81206300"
+            },
+            "state": null,
+            "last_updated": "2026-03-11T23:48:45Z",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "name": "Shell Recharge EV Waitrose - Newark",
+            "time_zone": "Europe/London",
+            "owner": {
+                "name": "Shell Recharge",
+                "website": "https://shellrecharge.com/"
+            },
+            "operator": {
+                "name": "Shell Recharge",
+                "website": "https://shellrecharge.com/"
+            },
+            "energy_mix": null,
+            "charging_when_closed": true,
+            "directions": null,
+            "evses": [
+                {
+                    "uid": "44_SATURN_22_018-2",
+                    "status": "UNKNOWN",
+                    "last_updated": "2026-02-24T07:27:10Z",
+                    "evse_id": "GB*TNM*EGL44*SATURN*22*018*2",
+                    "physical_reference": "44_SATURN_22_018",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1503",
+                            "standard": "IEC_62196_T2",
+                            "format": "CABLE",
+                            "power_type": "AC_3_PHASE",
+                            "last_updated": "2026-03-10T21:32:32Z",
+                            "max_amperage": 32,
+                            "max_voltage": 230,
+                            "max_electric_power": 7360,
+                            "tariff_ids": [
+                                "PP358281827_8"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "44_SATURN_22_019-1",
+                    "status": "UNKNOWN",
+                    "last_updated": "2026-02-24T07:27:16Z",
+                    "evse_id": "GB*TNM*EGL44*SATURN*22*019*1",
+                    "physical_reference": "44_SATURN_22_019",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1508",
+                            "standard": "IEC_62196_T2",
+                            "format": "CABLE",
+                            "power_type": "AC_3_PHASE",
+                            "last_updated": "2026-03-10T21:32:33Z",
+                            "max_amperage": 32,
+                            "max_voltage": 230,
+                            "max_electric_power": 7360,
+                            "tariff_ids": [
+                                "PP358281827_8"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "44_SATURN_22_019-2",
+                    "status": "UNKNOWN",
+                    "last_updated": "2026-02-24T07:27:15Z",
+                    "evse_id": "GB*TNM*EGL44*SATURN*22*019*2",
+                    "physical_reference": "44_SATURN_22_019",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1509",
+                            "standard": "IEC_62196_T2",
+                            "format": "CABLE",
+                            "power_type": "AC_3_PHASE",
+                            "last_updated": "2026-03-10T21:32:33Z",
+                            "max_amperage": 32,
+                            "max_voltage": 230,
+                            "max_electric_power": 7360,
+                            "tariff_ids": [
+                                "PP358281827_8"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "44_SATURN_22_020-1",
+                    "status": "UNKNOWN",
+                    "last_updated": "2026-02-24T07:27:02Z",
+                    "evse_id": "GB*TNM*EGL44*SATURN*22*020*1",
+                    "physical_reference": "44_SATURN_22_020",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1510",
+                            "standard": "IEC_62196_T2",
+                            "format": "CABLE",
+                            "power_type": "AC_3_PHASE",
+                            "last_updated": "2026-03-10T21:32:33Z",
+                            "max_amperage": 32,
+                            "max_voltage": 230,
+                            "max_electric_power": 7360,
+                            "tariff_ids": [
+                                "PP358281827_8"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "44_SATURN_22_020-2",
+                    "status": "UNKNOWN",
+                    "last_updated": "2026-02-24T07:27:02Z",
+                    "evse_id": "GB*TNM*EGL44*SATURN*22*020*2",
+                    "physical_reference": "44_SATURN_22_020",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1511",
+                            "standard": "IEC_62196_T2",
+                            "format": "CABLE",
+                            "power_type": "AC_3_PHASE",
+                            "last_updated": "2026-03-10T21:32:33Z",
+                            "max_amperage": 32,
+                            "max_voltage": 230,
+                            "max_electric_power": 7360,
+                            "tariff_ids": [
+                                "PP358281827_8"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "Terra_54_029",
+                    "status": "BLOCKED",
+                    "last_updated": "2026-03-11T23:48:45Z",
+                    "evse_id": "GB*TNM*EGL44*03*2919*01",
+                    "physical_reference": "01",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1492",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:32:32Z",
+                            "max_amperage": 125,
+                            "max_voltage": 400,
+                            "max_electric_power": 50000,
+                            "tariff_ids": [
+                                "PP358281847_4"
+                            ]
+                        },
+                        {
+                            "id": "1493",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:32:32Z",
+                            "max_amperage": 125,
+                            "max_voltage": 400,
+                            "max_electric_power": 50000,
+                            "tariff_ids": [
+                                "PP358281847_4"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "Terra_54_030",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T17:34:18Z",
+                    "evse_id": "GB*TNM*EGL44*03*2919*02",
+                    "physical_reference": "02",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1494",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:32:32Z",
+                            "max_amperage": 125,
+                            "max_voltage": 400,
+                            "max_electric_power": 50000,
+                            "tariff_ids": [
+                                "PP358281847_4"
+                            ]
+                        },
+                        {
+                            "id": "1495",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:32:32Z",
+                            "max_amperage": 125,
+                            "max_voltage": 400,
+                            "max_electric_power": 50000,
+                            "tariff_ids": [
+                                "PP358281847_4"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "44_SATURN_22_018-1",
+                    "status": "UNKNOWN",
+                    "last_updated": "2026-02-24T07:27:11Z",
+                    "evse_id": "GB*TNM*EGL44*SATURN*22*018*1",
+                    "physical_reference": "44_SATURN_22_018",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1502",
+                            "standard": "IEC_62196_T2",
+                            "format": "CABLE",
+                            "power_type": "AC_3_PHASE",
+                            "last_updated": "2026-03-10T21:32:32Z",
+                            "max_amperage": 32,
+                            "max_voltage": 230,
+                            "max_electric_power": 7360,
+                            "tariff_ids": [
+                                "PP358281827_8"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "TNM",
+            "id": "264",
+            "country_code": "GB",
+            "publish": true,
+            "country": "GBR",
+            "address": "Shell, Kingston Bypass",
+            "city": "Esher",
+            "postal_code": "KT10 9TL",
+            "coordinates": {
+                "latitude": "51.37355300",
+                "longitude": "-0.33877600"
+            },
+            "state": null,
+            "last_updated": "2026-03-12T06:22:21Z",
+            "opening_times": {
+                "regular_hours": [
+                    {
+                        "period_begin": "06:00",
+                        "period_end": "23:00",
+                        "weekday": 1
+                    },
+                    {
+                        "period_begin": "06:00",
+                        "period_end": "23:00",
+                        "weekday": 2
+                    },
+                    {
+                        "period_begin": "06:00",
+                        "period_end": "23:00",
+                        "weekday": 3
+                    },
+                    {
+                        "period_begin": "06:00",
+                        "period_end": "23:00",
+                        "weekday": 4
+                    },
+                    {
+                        "period_begin": "06:00",
+                        "period_end": "23:00",
+                        "weekday": 5
+                    },
+                    {
+                        "period_begin": "06:00",
+                        "period_end": "23:00",
+                        "weekday": 6
+                    },
+                    {
+                        "period_begin": "06:00",
+                        "period_end": "23:00",
+                        "weekday": 7
+                    }
+                ],
+                "twentyfourseven": false
+            },
+            "name": "Shell Recharge Shell Hinchley Wood",
+            "time_zone": "Europe/London",
+            "owner": {
+                "name": "Shell Recharge",
+                "website": "https://shellrecharge.com/"
+            },
+            "operator": {
+                "name": "Shell Recharge",
+                "website": "https://shellrecharge.com/"
+            },
+            "energy_mix": null,
+            "charging_when_closed": true,
+            "directions": null,
+            "evses": [
+                {
+                    "uid": "TRIT_PKM150_0020",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T21:06:45Z",
+                    "evse_id": "GB*TNM*EGL44*01*1191*04",
+                    "physical_reference": "04",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1297",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:32:04Z",
+                            "max_amperage": 175,
+                            "max_voltage": 400,
+                            "max_electric_power": 70000,
+                            "tariff_ids": [
+                                "PP358282149_2"
+                            ]
+                        },
+                        {
+                            "id": "1298",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:32:04Z",
+                            "max_amperage": 300,
+                            "max_voltage": 500,
+                            "max_electric_power": 150000,
+                            "tariff_ids": [
+                                "PP358282149_7"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "TERRA_54_053",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-12T02:31:07Z",
+                    "evse_id": "GB*TNM*EGL44*01*1191*01",
+                    "physical_reference": "01",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1983",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:32:04Z",
+                            "max_amperage": 125,
+                            "max_voltage": 400,
+                            "max_electric_power": 50000,
+                            "tariff_ids": [
+                                "PP358282149_4"
+                            ]
+                        },
+                        {
+                            "id": "1984",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:32:04Z",
+                            "max_amperage": 125,
+                            "max_voltage": 400,
+                            "max_electric_power": 50000,
+                            "tariff_ids": [
+                                "PP358282149_4"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "TRIT_PKM150_0018",
+                    "status": "AVAILABLE",
+                    "last_updated": "2026-03-11T20:32:38Z",
+                    "evse_id": "GB*TNM*EGL44*01*1191*02",
+                    "physical_reference": "02",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1293",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:32:04Z",
+                            "max_amperage": 175,
+                            "max_voltage": 400,
+                            "max_electric_power": 70000,
+                            "tariff_ids": [
+                                "PP358282149_2"
+                            ]
+                        },
+                        {
+                            "id": "1294",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:32:04Z",
+                            "max_amperage": 300,
+                            "max_voltage": 500,
+                            "max_electric_power": 150000,
+                            "tariff_ids": [
+                                "PP358282149_7"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uid": "TRIT_PKM150_0019",
+                    "status": "CHARGING",
+                    "last_updated": "2026-03-12T06:22:21Z",
+                    "evse_id": "GB*TNM*EGL44*01*1191*03",
+                    "physical_reference": "03",
+                    "floor_level": null,
+                    "directions": null,
+                    "parking_restrictions": null,
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1295",
+                            "standard": "CHADEMO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:32:04Z",
+                            "max_amperage": 175,
+                            "max_voltage": 400,
+                            "max_electric_power": 70000,
+                            "tariff_ids": [
+                                "PP358282149_2"
+                            ]
+                        },
+                        {
+                            "id": "1296",
+                            "standard": "IEC_62196_T2_COMBO",
+                            "format": "CABLE",
+                            "power_type": "DC",
+                            "last_updated": "2026-03-10T21:32:04Z",
+                            "max_amperage": 300,
+                            "max_voltage": 500,
+                            "max_electric_power": 150000,
+                            "tariff_ids": [
+                                "PP358282149_7"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,2807 @@
+{
+    "data": [
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "98632dfb-6751-45ec-b3a0-9066b749fdfa",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "Opposite 25 Grovelands Road",
+            "address": "Grovelands Road",
+            "city": "Haringey",
+            "postal_code": "N15 6BT",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.5784972",
+                "longitude": "-0.0641408"
+            },
+            "evses": [
+                {
+                    "uid": "7537c966-4204-480b-b886-b36da876a856",
+                    "evse_id": "GB*CGY*E*00022",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-07T08:25:21Z"
+                        }
+                    ],
+                    "physical_reference": "00022",
+                    "last_updated": "2026-03-07T08:25:21Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Haringey"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-07T08:25:21Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "17d206f9-9b8d-450e-a84a-2a58f30cc416",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "141 - 143 Seaford Road",
+            "address": " Seaford Road",
+            "city": "Haringey",
+            "postal_code": "N15 5DX",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.5841962",
+                "longitude": "-0.0839332"
+            },
+            "evses": [
+                {
+                    "uid": "1b04f6b6-44bb-4f47-810c-4be566e57e31",
+                    "evse_id": "GB*CGY*E*00024",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-12T00:01:10Z"
+                        }
+                    ],
+                    "physical_reference": "00024",
+                    "last_updated": "2026-03-12T00:01:10Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Haringey "
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-12T00:01:10Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "472976e5-8c76-46d3-9a0f-3163e705138f",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "45 Myddleton Road",
+            "address": "Myddleton Road",
+            "city": "Haringey",
+            "postal_code": "N22 8LY",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.6063074",
+                "longitude": "-0.1141004"
+            },
+            "evses": [
+                {
+                    "uid": "504fb39b-ba17-4e6b-948e-e07d1e81d2f6",
+                    "evse_id": "GB*CGY*E*00012",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-12T03:10:21Z"
+                        }
+                    ],
+                    "physical_reference": "00012",
+                    "last_updated": "2026-03-12T03:10:21Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Haringey"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-12T03:10:21Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "38c126ac-8a8f-4751-a79e-0f430f2fd484",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "2 - 4 Cecile Park",
+            "address": "Cecile Park",
+            "city": "Haringey ",
+            "postal_code": "N8 9AX",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.5769071",
+                "longitude": "-0.1217295"
+            },
+            "evses": [
+                {
+                    "uid": "ec63f363-223b-46aa-b6d5-ddaf40bc79c5",
+                    "evse_id": "GB*CGY*E*00030",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-08T09:09:56Z"
+                        }
+                    ],
+                    "physical_reference": "00030",
+                    "last_updated": "2026-03-08T09:09:56Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Haringey "
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-08T09:09:56Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "85efc015-08df-4157-944b-f9ad810b9f66",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "37 Cholmeley Crescent",
+            "address": "Cholmeley Crescent",
+            "city": "Haringey ",
+            "postal_code": "N6 5EX",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.5727333",
+                "longitude": "-0.1460844"
+            },
+            "evses": [
+                {
+                    "uid": "d9d80a08-ac53-40f8-955d-b35a5cc9e7ea",
+                    "evse_id": "GB*CGY*E*00031",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-11T19:34:53Z"
+                        }
+                    ],
+                    "physical_reference": "00031",
+                    "last_updated": "2026-03-11T19:34:53Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Haringey"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-11T19:34:53Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "da5d9902-1ec9-4a8b-b197-ccf78dc8403a",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "33 Carver Road",
+            "address": "Carver Road",
+            "city": "Dulwich Village",
+            "postal_code": "SE24 9LS",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4538378",
+                "longitude": "-0.0988169"
+            },
+            "evses": [
+                {
+                    "uid": "be0a7e3f-a876-45fd-b629-90b29d51598f",
+                    "evse_id": "GB*CGY*E*00033",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-09T10:16:27Z"
+                        }
+                    ],
+                    "physical_reference": "00033",
+                    "last_updated": "2026-03-09T10:16:27Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-09T10:16:27Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "82d02292-5550-4532-b73f-e5e8e11d0893",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "23 Carver Road",
+            "address": "Carver Road",
+            "city": "Dulwich Village",
+            "postal_code": "SE24 9LS",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4538178",
+                "longitude": "-0.0984764"
+            },
+            "evses": [
+                {
+                    "uid": "6cba0053-a1bb-469d-8485-033e6bb4617d",
+                    "evse_id": "GB*CGY*E*00041",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-11T17:05:01Z"
+                        }
+                    ],
+                    "physical_reference": "00041",
+                    "last_updated": "2026-03-11T17:05:01Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-11T17:05:01Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "2648bdd9-fa56-4a25-807d-0f407f8afadc",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "19 Waveney Avenue",
+            "address": "Waveney Avenue",
+            "city": "Peckham Rye",
+            "postal_code": "SE15 3UF",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.46118",
+                "longitude": "-0.0591834"
+            },
+            "evses": [
+                {
+                    "uid": "b58c7ce4-246d-41ef-bf66-da04cf6a0f70",
+                    "evse_id": "GB*CGY*E*00043",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-08T09:16:55Z"
+                        }
+                    ],
+                    "physical_reference": "00043",
+                    "last_updated": "2026-03-08T09:16:55Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-08T09:16:55Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "0879e813-567a-4b7b-91bd-b3235037417d",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "11 Lanbury Road",
+            "address": "Lanbury Road",
+            "city": "Peckham Rye",
+            "postal_code": "SE15 3DB",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4592133",
+                "longitude": "-0.0475738"
+            },
+            "evses": [
+                {
+                    "uid": "d46ffe08-befe-44b9-afe9-fd38ce49a26f",
+                    "evse_id": "GB*CGY*E*00045",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-10T14:47:07Z"
+                        }
+                    ],
+                    "physical_reference": "00045",
+                    "last_updated": "2026-03-10T14:47:07Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-10T14:47:07Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "3cb30347-b20d-474f-804f-2d0437ffbb1a",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "17 Rosebery Road",
+            "address": "Rosebery Road",
+            "city": "Haringey",
+            "postal_code": "N10 2LE",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.5975395",
+                "longitude": "-0.1386802"
+            },
+            "evses": [
+                {
+                    "uid": "8d3f6767-27bf-46c0-a344-bf59f9f5fe26",
+                    "evse_id": "GB*CGY*E*00048",
+                    "status": "FAULTED",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2025-07-23T10:51:35Z"
+                        }
+                    ],
+                    "physical_reference": "00048",
+                    "last_updated": "2025-07-24T10:49:34Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Haringey"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2025-07-24T10:49:34Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "22ad64df-abec-4830-ba5c-b35815036752",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "George and Dragon, The Causeway - a",
+            "address": "87 The Causeway",
+            "city": "Marlow",
+            "postal_code": "SL7 2AA",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.568576",
+                "longitude": "-0.773405"
+            },
+            "evses": [
+                {
+                    "uid": "e576f457-b2f6-410e-b702-a76bd23d5721",
+                    "evse_id": "GB*CGY*E*00049",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 16,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-07T09:25:30Z"
+                        }
+                    ],
+                    "physical_reference": "00049",
+                    "last_updated": "2026-03-07T09:25:30Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Buckinghamshire County Council"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-07T09:25:30Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "c48d600a-67e4-492d-99d9-d47684ec1b8c",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "Rosemary Court, Blakes Road",
+            "address": "Blakes Road",
+            "city": "Peckham",
+            "postal_code": "SE15 6FJ",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.47813",
+                "longitude": "-0.0800076"
+            },
+            "evses": [
+                {
+                    "uid": "5fbf253f-3174-490d-9acd-aacbe97c4b74",
+                    "evse_id": "GB*CGY*E*00999",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-10T07:17:36Z"
+                        }
+                    ],
+                    "physical_reference": "00999",
+                    "last_updated": "2026-03-10T07:17:36Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "char.gy"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-10T07:17:36Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "c64d3896-3a20-4eb1-9d5c-bf57d0eb3b42",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "30 Holmdene Avenue",
+            "address": "Holmdene Avenue",
+            "city": "Dulwich Village",
+            "postal_code": "SE24 9LF",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4552458",
+                "longitude": "-0.0958243"
+            },
+            "evses": [
+                {
+                    "uid": "5e23e796-57b4-4bd9-8310-c40131f66180",
+                    "evse_id": "GB*CGY*E*00036",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-08T18:47:34Z"
+                        }
+                    ],
+                    "physical_reference": "00036",
+                    "last_updated": "2026-03-08T18:47:34Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-08T18:47:34Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "77370c08-7943-4764-881c-f9ac053928ae",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "George and Dragon, The Causeway - c",
+            "address": "All Saints Church Hall, The Causeway",
+            "city": "Marlow",
+            "postal_code": "SL7 2AA",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.569039",
+                "longitude": "-0.7739253"
+            },
+            "evses": [
+                {
+                    "uid": "cc51e814-d719-4ec4-891c-7aaa138c3a5e",
+                    "evse_id": "GB*CGY*E*00037",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-07T15:22:22Z"
+                        }
+                    ],
+                    "physical_reference": "00037",
+                    "last_updated": "2026-03-07T15:22:22Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Buckinghamshire County Council"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-07T15:22:22Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "b31b66d8-1c80-4a1a-b25c-066e0caaa783",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "George and Dragon, The Causeway - b",
+            "address": "85 The Causeway",
+            "city": "Marlow",
+            "postal_code": "SL7 2AA",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.5688798",
+                "longitude": "-0.7737348"
+            },
+            "evses": [
+                {
+                    "uid": "56f9f655-0589-4a13-8a26-b38e026dfe14",
+                    "evse_id": "GB*CGY*E*00040",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 18,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-07T09:14:43Z"
+                        }
+                    ],
+                    "physical_reference": "00040",
+                    "last_updated": "2026-03-07T09:14:43Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Buckinghamshire County Council"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-07T09:14:43Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "96bd890a-8735-4b3b-b8f3-57622cde169a",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "76 Beckwith Road",
+            "address": "Beckwith Road",
+            "city": "Dulwich Village",
+            "postal_code": "SE24 9LQ",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4558158",
+                "longitude": "-0.0909926"
+            },
+            "evses": [
+                {
+                    "uid": "bc42a850-8f91-495f-8c14-ac931083be97",
+                    "evse_id": "GB*CGY*E*00057",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-09T12:23:28Z"
+                        }
+                    ],
+                    "physical_reference": "00057",
+                    "last_updated": "2026-03-09T12:23:28Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-09T12:23:28Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "a237d7f5-3cc2-4d6b-b018-457415f89c6d",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "83 Beauval Road",
+            "address": "Beauval Road",
+            "city": "Dulwich Village",
+            "postal_code": "SE22 8UH",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4509388",
+                "longitude": "-0.0777168"
+            },
+            "evses": [
+                {
+                    "uid": "262c08a2-ab5a-4418-ae8e-5b3c16feee01",
+                    "evse_id": "GB*CGY*E*00054",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-11T15:12:15Z"
+                        }
+                    ],
+                    "physical_reference": "00054",
+                    "last_updated": "2026-03-11T15:12:15Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-11T15:12:15Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "d49d7d8a-0a99-45d2-9ee9-0275d2d7604f",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "35 Holmdene Avenue",
+            "address": "Holmdene Avenue",
+            "city": "Dulwich Village",
+            "postal_code": "SE24 9LB",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.455028",
+                "longitude": "-0.095575"
+            },
+            "evses": [
+                {
+                    "uid": "90acd040-0a3a-4860-8b6b-abdccca537f9",
+                    "evse_id": "GB*CGY*E*00032",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-09T07:34:07Z"
+                        }
+                    ],
+                    "physical_reference": "00032",
+                    "last_updated": "2026-03-09T07:34:07Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-09T07:34:07Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "86f17ad0-ee7d-4909-82f6-e05bde260167",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "125 Ivydale Road",
+            "address": "Ivydale Road",
+            "city": "Peckham Rye",
+            "postal_code": "SE15 3DX",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4624442",
+                "longitude": "-0.0475773"
+            },
+            "evses": [
+                {
+                    "uid": "eca483e5-fee9-4874-8577-4b620d12f5b8",
+                    "evse_id": "GB*CGY*E*00060",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-10T06:05:10Z"
+                        }
+                    ],
+                    "physical_reference": "00060",
+                    "last_updated": "2026-03-10T06:05:10Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-10T06:05:10Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "e42fdae9-68f3-4521-80ed-9aa5dfc902f1",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "39 Aysgarth Road",
+            "address": "Aysgarth Road",
+            "city": "Dulwich Village",
+            "postal_code": "SE21 7JR",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.449345",
+                "longitude": "-0.087133"
+            },
+            "evses": [
+                {
+                    "uid": "cdf3c64a-875c-4624-9006-2438139f01e3",
+                    "evse_id": "GB*CGY*E*00055",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-12T00:07:51Z"
+                        }
+                    ],
+                    "physical_reference": "00055",
+                    "last_updated": "2026-03-12T00:07:51Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-12T00:07:51Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "21ec3ee5-36ce-40ed-be61-c090cb0a3d1a",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "355 Rotherhithe Street",
+            "address": "Rotherhithe Street",
+            "city": "Surrey Docks",
+            "postal_code": "SE16 5LJ",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.498355",
+                "longitude": "-0.035094"
+            },
+            "evses": [
+                {
+                    "uid": "4689c392-ea3c-4c9f-a274-1be9c302cc26",
+                    "evse_id": "GB*CGY*E*00067",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 21,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-12T04:20:31Z"
+                        }
+                    ],
+                    "physical_reference": "00067",
+                    "last_updated": "2026-03-12T04:20:31Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-12T04:20:31Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "b9c3a2b0-205e-4018-8c17-d4e8fc93a394",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "Aysgarth Road, adjacent to 254 Turney Road",
+            "address": "Aysgarth Road",
+            "city": "Dulwich Village",
+            "postal_code": "SE21 7JR",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4495735",
+                "longitude": "-0.0873157"
+            },
+            "evses": [
+                {
+                    "uid": "d86ef85e-b4ca-4e81-ae18-ef27812887ac",
+                    "evse_id": "GB*CGY*E*00062",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-10T05:36:53Z"
+                        }
+                    ],
+                    "physical_reference": "00062",
+                    "last_updated": "2026-03-10T05:36:53Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-10T05:36:53Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "d9cf7d52-241c-46e1-a15e-c77e7144e0f2",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "Opposite 29 Athenlay Road",
+            "address": "Athenlay Road",
+            "city": "Peckham Rye",
+            "postal_code": "SE15 3EA",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4575532",
+                "longitude": "-0.0464834"
+            },
+            "evses": [
+                {
+                    "uid": "d60da218-406f-4a72-ad93-4e75a1b717ef",
+                    "evse_id": "GB*CGY*E*00050",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-09T15:36:41Z"
+                        }
+                    ],
+                    "physical_reference": "00050",
+                    "last_updated": "2026-03-09T15:36:41Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-09T15:36:41Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "03eb4534-fd72-461a-a4fa-dcaaa7923a5f",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "138 Ivydale Road",
+            "address": "Ivydale Road",
+            "city": "Peckham Rye",
+            "postal_code": "SE15 3BT",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4628346",
+                "longitude": "-0.0480042"
+            },
+            "evses": [
+                {
+                    "uid": "2f31e323-fd97-468b-9271-2052e6e9d7f7",
+                    "evse_id": "GB*CGY*E*00063",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 21,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-02-17T23:26:53Z"
+                        }
+                    ],
+                    "physical_reference": "00063",
+                    "last_updated": "2026-02-17T23:26:53Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-02-17T23:26:53Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "25674789-c20a-4acb-84a9-2a147c5ab3ba",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "39 Dulwich Wood Avenue",
+            "address": "Dulwich Wood Avenue",
+            "city": "Dulwich Wood",
+            "postal_code": "SE19 1HG",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4250826",
+                "longitude": "-0.0819705"
+            },
+            "evses": [
+                {
+                    "uid": "b11cc58f-a2bf-437f-a69c-9500278b9811",
+                    "evse_id": "GB*CGY*E*00051",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-09T18:30:22Z"
+                        }
+                    ],
+                    "physical_reference": "00051",
+                    "last_updated": "2026-03-09T18:30:22Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-09T18:30:22Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "93352106-44db-48e2-aadf-14e309a47a48",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "5 Oakley Place",
+            "address": "Oakley Place",
+            "city": "Old Kent Road",
+            "postal_code": "SE1 5AD",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4867334",
+                "longitude": "-0.0754243"
+            },
+            "evses": [
+                {
+                    "uid": "7b46c6b6-22c8-4dea-acaa-ddb6530a86e0",
+                    "evse_id": "GB*CGY*E*00061",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-11T22:09:33Z"
+                        }
+                    ],
+                    "physical_reference": "00061",
+                    "last_updated": "2026-03-11T22:09:33Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-11T22:09:33Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "7a79cdab-9b2c-4ac4-a7e2-daca0baa149a",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "73 Beckwith Road",
+            "address": "Beckwith Road",
+            "city": "Dulwich Village",
+            "postal_code": "SE24 9LQ",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4556276",
+                "longitude": "-0.0911417"
+            },
+            "evses": [
+                {
+                    "uid": "5aef94db-0035-4af8-b93e-e918be7b5918",
+                    "evse_id": "GB*CGY*E*00058",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-02-27T13:30:26Z"
+                        }
+                    ],
+                    "physical_reference": "00058",
+                    "last_updated": "2026-02-27T13:30:26Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-02-27T13:30:26Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "d00b48df-7b80-4de3-b892-b0d32129a4ff",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "34 Lanbury Road",
+            "address": "Lanbury Road",
+            "city": "Peckham Rye",
+            "postal_code": "SE15 3DB",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.459132",
+                "longitude": "-0.0478725"
+            },
+            "evses": [
+                {
+                    "uid": "39379a5e-b71b-474e-8e80-8e0cba3a98f0",
+                    "evse_id": "GB*CGY*E*00038",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 20,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-11T11:40:53Z"
+                        }
+                    ],
+                    "physical_reference": "00038",
+                    "last_updated": "2026-03-11T11:40:53Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-11T11:40:53Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "8509f7fa-9b94-41c4-9cab-77b6c226604d",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "80 Burbage Road",
+            "address": "Burbage Road",
+            "city": "Dulwich Village",
+            "postal_code": "SE24 9HE",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4495775",
+                "longitude": "-0.0923603"
+            },
+            "evses": [
+                {
+                    "uid": "10d44946-2842-41fc-b6ab-c2c00a6ba075",
+                    "evse_id": "GB*CGY*E*00066",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-02-27T16:39:11Z"
+                        }
+                    ],
+                    "physical_reference": "00066",
+                    "last_updated": "2026-02-27T16:39:11Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-02-27T16:39:11Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "873f8e3b-c36e-4942-a081-283be08fa791",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "30 Waveney Avenue",
+            "address": "Waveney Avenue",
+            "city": "Peckham Rye",
+            "postal_code": "SE15 3UE",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4611037",
+                "longitude": "-0.0589435"
+            },
+            "evses": [
+                {
+                    "uid": "833b7f3c-b3e5-470c-9b23-e6b3f9ab998f",
+                    "evse_id": "GB*CGY*E*00056",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 20,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-06T00:12:19Z"
+                        }
+                    ],
+                    "physical_reference": "00056",
+                    "last_updated": "2026-03-06T00:12:19Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-06T00:12:19Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "57b41a74-763d-4298-96d5-e191d6e4b6d6",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "18 - 20 Carden Road",
+            "address": "Carden Road",
+            "city": "Peckham Rye",
+            "postal_code": "SE15 3UD",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4630047",
+                "longitude": "-0.061463"
+            },
+            "evses": [
+                {
+                    "uid": "b2aae991-4255-4d3f-8c87-8cbc1372526e",
+                    "evse_id": "GB*CGY*E*00029",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-04T15:44:16Z"
+                        }
+                    ],
+                    "physical_reference": "00029",
+                    "last_updated": "2026-03-04T15:44:16Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-04T15:44:16Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "de36f2db-fcfd-4d56-b4e7-41e7edeedbbe",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "5 Inverton Villas, Inverton Road",
+            "address": "Inverton Road",
+            "city": "Peckham Rye",
+            "postal_code": "SE15 3BY",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4592951",
+                "longitude": "-0.0497821"
+            },
+            "evses": [
+                {
+                    "uid": "2c91a3e3-5ede-437d-9d79-492d05080c99",
+                    "evse_id": "GB*CGY*E*00053",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-12T05:06:10Z"
+                        }
+                    ],
+                    "physical_reference": "00053",
+                    "last_updated": "2026-03-12T05:06:10Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-12T05:06:10Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "c63cf550-5858-4184-9723-3fb4c19d9d53",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "Opposite 12 Rye Hill Park",
+            "address": "Rye Hill Park",
+            "city": "Peckham Rye",
+            "postal_code": "SE15 3JX",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4589331",
+                "longitude": "-0.0559373"
+            },
+            "evses": [
+                {
+                    "uid": "2895d836-a996-438f-ad50-21698fedf5d6",
+                    "evse_id": "GB*CGY*E*00064",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-07T00:12:25Z"
+                        }
+                    ],
+                    "physical_reference": "00064",
+                    "last_updated": "2026-03-07T00:12:25Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-07T00:12:25Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "90b1f454-8b95-41ae-93ef-451c38afe358",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "55 Ruskin Walk",
+            "address": "Ruskin Walk",
+            "city": "Dulwich Village",
+            "postal_code": "SE24 9NA",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4539346",
+                "longitude": "-0.0968174"
+            },
+            "evses": [
+                {
+                    "uid": "382900c4-d764-4049-bcae-3d94d92d07ea",
+                    "evse_id": "GB*CGY*E*00092",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-04T14:47:20Z"
+                        }
+                    ],
+                    "physical_reference": "00092",
+                    "last_updated": "2026-03-04T14:47:20Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-04T14:47:20Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "1149e882-c09a-4e5e-99b9-8f6e4f4c5355",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "9 Thorncombe Road",
+            "address": "Thorncombe Road",
+            "city": "Goose Green",
+            "postal_code": "SE22 8PX",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.457038",
+                "longitude": "-0.0819226"
+            },
+            "evses": [
+                {
+                    "uid": "11fae8c7-d658-4a59-b2b5-029847d8ede9",
+                    "evse_id": "GB*CGY*E*00087",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-06T06:40:15Z"
+                        }
+                    ],
+                    "physical_reference": "00087",
+                    "last_updated": "2026-03-06T06:40:15Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-06T06:40:15Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "39e0ad5d-f65e-4f6b-baec-6d372504a23c",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "1a Belvoir Road",
+            "address": "Belvoir Road",
+            "city": "Dulwich Wood",
+            "postal_code": "SE22 0QY",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4455386",
+                "longitude": "-0.0663131"
+            },
+            "evses": [
+                {
+                    "uid": "0aee69ff-8b44-4488-8c3b-d3084cc53e28",
+                    "evse_id": "GB*CGY*E*00081",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-07T19:47:34Z"
+                        }
+                    ],
+                    "physical_reference": "00081",
+                    "last_updated": "2026-03-07T19:47:34Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-07T19:47:34Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "6a742310-6041-4585-bae0-eb06d1731773",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "66 Frankfurt Road",
+            "address": "Frankfurt Road",
+            "city": "Dulwich Village",
+            "postal_code": "SE24 9NY",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4558197",
+                "longitude": "-0.0940984"
+            },
+            "evses": [
+                {
+                    "uid": "9e17a650-98b9-4fec-af96-1dbb03f4cbf0",
+                    "evse_id": "GB*CGY*E*00082",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-10T08:35:51Z"
+                        }
+                    ],
+                    "physical_reference": "00082",
+                    "last_updated": "2026-03-10T08:35:51Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-10T08:35:51Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "675deb30-6279-4a3a-93a3-d1bf215633e3",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "110 Casino Avenue",
+            "address": "Casino Avenue",
+            "city": "Dulwich Village",
+            "postal_code": "SE24 9PL",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4576783",
+                "longitude": "-0.0915289"
+            },
+            "evses": [
+                {
+                    "uid": "2b7dc2bd-c537-4a09-a5f0-7c2be7f382f7",
+                    "evse_id": "GB*CGY*E*00086",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-06T00:06:32Z"
+                        }
+                    ],
+                    "physical_reference": "00086",
+                    "last_updated": "2026-03-06T00:06:32Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-06T00:06:32Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "a3dd666e-a9fb-4ac2-acad-d1053bc8584b",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "33 Borland Road",
+            "address": "Borland Road",
+            "city": "Peckham Rye",
+            "postal_code": "SE15 3BL",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4594773",
+                "longitude": "-0.0505385"
+            },
+            "evses": [
+                {
+                    "uid": "ddb2ed2a-9353-40a6-b4f0-3e38c822f82f",
+                    "evse_id": "GB*CGY*E*00090",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 20,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-12T05:33:06Z"
+                        }
+                    ],
+                    "physical_reference": "00090",
+                    "last_updated": "2026-03-12T05:33:06Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-12T05:33:06Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "e7796eaa-e67e-4a8d-8a88-c76966b831a8",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "14 Hichisson Road",
+            "address": "Hichisson Road",
+            "city": "Peckham Rye",
+            "postal_code": "SE15 3AL",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4577586",
+                "longitude": "-0.0504373"
+            },
+            "evses": [
+                {
+                    "uid": "11fb9d4c-efb3-4a19-a34a-a8a5f61b5cc2",
+                    "evse_id": "GB*CGY*E*00084",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-05T07:20:35Z"
+                        }
+                    ],
+                    "physical_reference": "00084",
+                    "last_updated": "2026-03-05T07:20:35Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-05T07:20:35Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "246af42c-5f4e-4dea-95b0-28ac07a6625f",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "204 Camberwell Grove",
+            "address": "Camberwell Grove",
+            "city": "Champion Hill",
+            "postal_code": "SE5 8RJ",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4663638",
+                "longitude": "-0.0834567"
+            },
+            "evses": [
+                {
+                    "uid": "fc0e7d55-861f-457a-8430-e22d03c74c2a",
+                    "evse_id": "GB*CGY*E*00998",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-11T00:04:04Z"
+                        }
+                    ],
+                    "physical_reference": "00998",
+                    "last_updated": "2026-03-11T00:04:04Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "char.gy"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-11T00:04:04Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "824e67cd-1902-4077-83b7-6b3e6702ed95",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "Elcot Avenue, corner of Friary Road",
+            "address": "Elcot Avenue, Friary Road",
+            "city": "Peckham",
+            "postal_code": "SE15 1QD",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4778974",
+                "longitude": "-0.0649937"
+            },
+            "evses": [
+                {
+                    "uid": "7e9343f6-8b80-4456-b706-fbeeda5c8498",
+                    "evse_id": "GB*CGY*E*00091",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-09T08:18:38Z"
+                        }
+                    ],
+                    "physical_reference": "00091",
+                    "last_updated": "2026-03-09T08:18:38Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-09T08:18:38Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "1cd22b99-75be-4e8b-8b55-fea4c76b7563",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "38 Goodrich Road",
+            "address": "Goodrich Road",
+            "city": "Goose Green",
+            "postal_code": "SE22 9EQ",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4521067",
+                "longitude": "-0.0740269"
+            },
+            "evses": [
+                {
+                    "uid": "1e17b75f-1933-4062-b7ed-19041f3b8dd7",
+                    "evse_id": "GB*CGY*E*00078",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-10T16:07:06Z"
+                        }
+                    ],
+                    "physical_reference": "00078",
+                    "last_updated": "2026-03-10T16:07:06Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-10T16:07:06Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "d8f218df-1103-462d-97aa-fea6f8423f7b",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "Holford House, Camilla Road",
+            "address": "Camilla Road",
+            "city": "South Bermondsey",
+            "postal_code": "SE16 3NP",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4900531",
+                "longitude": "-0.0633666"
+            },
+            "evses": [
+                {
+                    "uid": "ce152e7d-8a52-4b0a-aa9c-48b7b66bba99",
+                    "evse_id": "GB*CGY*E*00076",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-12T06:24:20Z"
+                        }
+                    ],
+                    "physical_reference": "00076",
+                    "last_updated": "2026-03-12T06:24:20Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-12T06:24:20Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "2229c133-1c93-45b2-82a1-3b0500f14327",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "51 Hollingbourne Road",
+            "address": "Hollingbourne Road",
+            "city": "Dulwich Village",
+            "postal_code": "SE24 9LE",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4540827",
+                "longitude": "-0.0955519"
+            },
+            "evses": [
+                {
+                    "uid": "435a90d8-d812-4b9c-9fab-bfec852c3a20",
+                    "evse_id": "GB*CGY*E*00073",
+                    "status": "FAULTED",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 21,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-03T12:07:16Z"
+                        }
+                    ],
+                    "physical_reference": "00073",
+                    "last_updated": "2026-03-03T12:07:16Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-03T12:07:16Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "11b768dd-bd7f-4af1-937f-4c4ccbf4b7cc",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "24 Collett Road",
+            "address": "Collett Road",
+            "city": "North Bermondsey",
+            "postal_code": "SE16 4DD",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4962955",
+                "longitude": "-0.0641096"
+            },
+            "evses": [
+                {
+                    "uid": "cb69c157-cfcc-4a6f-9858-b25f8252722f",
+                    "evse_id": "GB*CGY*E*00074",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 21,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-10T10:53:32Z"
+                        }
+                    ],
+                    "physical_reference": "00074",
+                    "last_updated": "2026-03-10T10:53:32Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-10T10:53:32Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "a6d48f6a-7f07-47cc-9249-e85142b774d2",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "353 Rotherhithe Street",
+            "address": "Rotherhithe Street",
+            "city": "Surrey Docks",
+            "postal_code": "SE16 5LJ",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.498366",
+                "longitude": "-0.0354368"
+            },
+            "evses": [
+                {
+                    "uid": "51d55127-8790-4d36-ba75-0687d3671025",
+                    "evse_id": "GB*CGY*E*00042",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-12T04:03:50Z"
+                        }
+                    ],
+                    "physical_reference": "00042",
+                    "last_updated": "2026-03-12T04:03:50Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-12T04:03:50Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "abe8b169-502f-48a1-afc4-1efe89556917",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "11 Shawbury Road",
+            "address": "Shawbury Road",
+            "city": "Goose Green",
+            "postal_code": "SE22 9DH",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.457137",
+                "longitude": "-0.0743786"
+            },
+            "evses": [
+                {
+                    "uid": "3c379d2a-f6f7-42ed-8739-5ea86676ea89",
+                    "evse_id": "GB*CGY*E*00034",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-02-19T10:52:46Z"
+                        }
+                    ],
+                    "physical_reference": "00034",
+                    "last_updated": "2026-02-19T10:52:46Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-02-19T10:52:46Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "c5b7c3ce-bf8f-4000-ae27-9714f08a0a50",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "75 Friern Road",
+            "address": "Friern Road",
+            "city": "Dulwich Hill",
+            "postal_code": "SE22 0AU",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.453812",
+                "longitude": "-0.0675231"
+            },
+            "evses": [
+                {
+                    "uid": "36fb6fe9-f6dd-4754-be85-9305dcbfdcaa",
+                    "evse_id": "GB*CGY*E*00083",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-01-21T16:47:57Z"
+                        }
+                    ],
+                    "physical_reference": "00083",
+                    "last_updated": "2026-02-10T15:08:40Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-02-10T15:08:40Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "71e3c9ec-5560-4457-9ed0-606a54bf1639",
+            "parking_type": "ON_STREET",
+            "publish": true,
+            "name": "9 Crofton Road",
+            "address": "Crofton Road",
+            "city": "St Giles",
+            "postal_code": "SE5 8LY",
+            "country": "GBR",
+            "coordinates": {
+                "latitude": "51.4729604",
+                "longitude": "-0.0798432"
+            },
+            "evses": [
+                {
+                    "uid": "a7cc9b2a-5051-4438-a10b-103fbba64b40",
+                    "evse_id": "GB*CGY*E*00075",
+                    "status": "WORKING",
+                    "capabilities": [
+                        "REMOTE_START_STOP_CAPABLE",
+                        "UNLOCK_CAPABLE"
+                    ],
+                    "connectors": [
+                        {
+                            "id": "1",
+                            "standard": "IEC_62196_T2",
+                            "format": "SOCKET",
+                            "power_type": "AC_1_PHASE",
+                            "max_voltage": 230,
+                            "max_amperage": 22,
+                            "tariff_ids": [
+                                "fd80692e-6fe0-42de-9f5f-88a292df9d42"
+                            ],
+                            "terms_and_conditions": "https://char.gy/terms-of-use",
+                            "last_updated": "2026-03-09T08:16:10Z"
+                        }
+                    ],
+                    "physical_reference": "00075",
+                    "last_updated": "2026-03-09T08:16:10Z"
+                }
+            ],
+            "operator": {
+                "name": "char.gy",
+                "website": "https://char.gy"
+            },
+            "owner": {
+                "name": "Southwark"
+            },
+            "time_zone": "Europe/London",
+            "opening_times": {
+                "twentyfourseven": true
+            },
+            "last_updated": "2026-03-09T08:16:10Z"
+        }
+    ],
+    "status_code": 1000,
+    "status_message": "Success",
+    "timestamp": "2026-03-12T06:26:56Z"
+}

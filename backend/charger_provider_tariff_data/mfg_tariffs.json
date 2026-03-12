@@ -1,0 +1,83 @@
+{
+    "timestamp": "2026-03-12T08:03:57.922Z",
+    "status_code": 1000,
+    "status_message": "Success",
+    "data": [
+        {
+            "id": "2",
+            "currency": "GBP",
+            "elements": [
+                {
+                    "price_components": [
+                        {
+                            "type": "ENERGY",
+                            "price": 0.6583,
+                            "step_size": 1,
+                            "vat": 20
+                        }
+                    ]
+                }
+            ],
+            "last_updated": "2025-08-12T13:34:29Z",
+            "country_code": "GB",
+            "party_id": "MFL"
+        },
+        {
+            "id": "3",
+            "currency": "GBP",
+            "elements": [
+                {
+                    "price_components": [
+                        {
+                            "type": "ENERGY",
+                            "price": 0.6583,
+                            "step_size": 1,
+                            "vat": 20
+                        }
+                    ]
+                }
+            ],
+            "last_updated": "2025-08-20T13:36:38Z",
+            "country_code": "GB",
+            "party_id": "MFL"
+        },
+        {
+            "id": "4",
+            "currency": "GBP",
+            "elements": [
+                {
+                    "price_components": [
+                        {
+                            "type": "ENERGY",
+                            "price": 0.575,
+                            "step_size": 1,
+                            "vat": 20
+                        }
+                    ]
+                }
+            ],
+            "last_updated": "2025-09-30T13:38:56Z",
+            "country_code": "GB",
+            "party_id": "MFL"
+        },
+        {
+            "id": "5",
+            "currency": "GBP",
+            "elements": [
+                {
+                    "price_components": [
+                        {
+                            "type": "ENERGY",
+                            "price": 0.575,
+                            "step_size": 1,
+                            "vat": 20
+                        }
+                    ]
+                }
+            ],
+            "last_updated": "2025-09-30T13:27:49Z",
+            "country_code": "GB",
+            "party_id": "MFL"
+        }
+    ]
+}

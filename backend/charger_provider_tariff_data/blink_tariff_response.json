@@ -1,0 +1,2461 @@
+{
+    "timestamp": "2026-03-12T06:55:25Z",
+    "status_code": 1000,
+    "status_message": "Success",
+    "data": [
+        {
+            "party_id": "BLK",
+            "id": "b59b489f-f409-4d03-ae53-dd0f3a983075",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-14T14:09:33Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.575,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "cae00c73-0d75-48e3-9a04-d1aead870211",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2024-08-01T14:27:11Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.28,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "7576fb7e-8517-4d74-9c00-2371eb6a98ad",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T12:02:12Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.3667,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "cae00c73-0d75-48e3-9a04-d1aead870223",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2024-08-01T14:27:11Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.4,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "cae00c73-0d75-48e3-9a04-d1aead870232",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2024-08-01T14:27:11Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.5,
+                            "vat": null,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "2564c4c6-be1d-4a5f-87f9-dd8f5438a78b",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T12:00:39Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.5417,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "f0baabb8-c494-4f12-b447-1735990ec64a",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:57:03Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.4167,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "5522a2ca-6b9f-4c45-a114-1d1f7f5621a2",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:54:23Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.3333,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "8ad8e2e4-73db-4d07-9069-fb99d7d17ac8",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-03-07T14:32:13Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.625,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "b24a0947-33d6-43f2-8247-9b17e63095e7",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T12:05:14Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": {
+                        "end_time": "07:00",
+                        "start_time": "00:00"
+                    },
+                    "price_components": [
+                        {
+                            "type": "ENERGY",
+                            "price": 0.2833,
+                            "vat": null,
+                            "step_size": 1
+                        }
+                    ]
+                },
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.3083,
+                            "vat": null,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "5e852206-73f4-43eb-96a0-e73729baa12f",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:50:58Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.2417,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "cae00c73-0d75-48e3-9a04-d1aead870218",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2024-08-01T14:27:11Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.35,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "e79806e9-0b57-4910-bf1f-a94fc63f2de6",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T12:03:25Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.4917,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "cae00c73-0d75-48e3-9a04-d1aead870111",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2024-08-01T14:27:11Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.6,
+                            "vat": null,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "cba3ba1c-92a5-47fd-a5fd-01a6e30beaab",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-14T13:16:45Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.45,
+                            "vat": null,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "74cb42ec-7954-49d9-b9bf-2c8ad8b1afe0",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:12:05Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.4417,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "a33dbc22-65c1-4db5-8774-1c6aaa874dad",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T12:03:03Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "ENERGY",
+                            "price": 0.575,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "4392bc59-b171-4c78-a329-d9a66f935210",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:44:09Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "ENERGY",
+                            "price": 0.6583,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "808d9901-2d64-4d1b-ad0f-6566f7bab0ce",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-09-12T10:59:12Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.4833,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "acf296b8-33d2-4f80-a61b-72d58869ebf4",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T12:02:52Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.375,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "cae00c73-0d75-48e3-9a04-d1aead870242",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2024-08-01T14:27:11Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.6,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "7e76cffe-8d3f-48b1-a752-d64ccb6d31ac",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-09-12T14:57:23Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.49,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "665d21bd-a6b8-4208-af7e-0803073a53c9",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:12:05Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.4417,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "4a66aa6f-24eb-4a6e-9775-baba5d4649c2",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T12:02:34Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.45,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "57e93fc5-25c3-422e-9ad4-90b6aab930ea",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:59:02Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.475,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "6f8f31ee-8d14-4961-89cc-b0b0d096cd78",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:24:16Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.4917,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "8928b90d-ca84-4afd-9066-8ef49a7606bd",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:30:35Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.3667,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "989c65bf-1557-4fb0-ac55-92633271465a",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:16:07Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "ENERGY",
+                            "price": 0.325,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "775cebdd-8977-4f1b-bbf8-1bdcaa7d3593",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:48:35Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.2083,
+                            "vat": null,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "cae00c73-0d75-48e3-9a04-d1aead870228",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2024-08-01T14:27:11Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.45,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "92636d31-9e33-4f58-a65d-54d9456cd435",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:31:12Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "ENERGY",
+                            "price": 0.4583,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "5923ba70-9d32-4738-a02f-91c6738cb3d6",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-04-25T12:28:09Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "ENERGY",
+                            "price": 0.4667,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "073ba1e3-38ed-467e-8849-1a23f9b315e7",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T12:03:29Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.5917,
+                            "vat": null,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "3f4fc280-5979-4df5-bde2-9918b844be48",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:31:12Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "ENERGY",
+                            "price": 0.4583,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "6d3d3f7f-54e7-4692-80c1-f9a7b399e690",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T12:59:32Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.2083,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "55e44cba-4341-4ebc-85b3-2d2430ed4cb5",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T12:02:52Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.4583,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "74a9663e-5e13-4926-872e-35fc7a75e668",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T12:00:39Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.5417,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "0c86999e-05ff-458a-9baf-be6870c9e444",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T12:02:34Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "ENERGY",
+                            "price": 0.6,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "4960964b-7fa5-443d-904f-4f07c94db249",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:23:12Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.5083,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "cae00c73-0d75-48e3-9a04-d1aead870219",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2024-08-01T14:27:11Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.36,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "182ae7e3-83eb-4411-9b83-f1bbeac50cdc",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:49:24Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.6667,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "b466ed83-c2ef-4565-aa24-776b093aa70d",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T12:03:29Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.5083,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "412c6d6d-6e18-4d47-ad27-49800138c26a",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:27:28Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.375,
+                            "vat": null,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "4d94593e-4db9-4769-8023-6d04f23b5a95",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:57:03Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.4167,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "753ab289-72b0-47db-af1c-317807aa03bf",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T12:03:03Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.6583,
+                            "vat": null,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "1f4a2342-661f-4b73-a110-583bfd79bd38",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-14T14:09:33Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.575,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "151ee3c1-c0a3-4cff-b3ec-d3d95c50f82a",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:58:20Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.6083,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "cae00c73-0d75-48e3-9a04-d1aead870080",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2024-08-01T14:27:11Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "ENERGY",
+                            "price": 0.28,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "cae00c73-0d75-48e3-9a04-d1aead870097",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2024-08-01T14:27:11Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.45,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "0365056e-1ff3-4a7b-a35d-3bed78c9fd50",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-03-17T12:38:57Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.425,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "47a1bdc8-9804-42ce-9641-08119a4c9007",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:56:38Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.4083,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "3da72503-27e0-440b-97d5-50bb01015578",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:58:01Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.6167,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "530173f2-b1a4-44b8-9b25-336a02fb95ab",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T12:03:25Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.6,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "ca1dd86a-17e6-4a19-bc27-05c86bc6a34a",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:57:42Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.4333,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "47d4e456-9f28-48b5-b555-64c1525c83ba",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:44:09Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.6583,
+                            "vat": null,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "c19ecbd8-c232-49ed-ad47-b1f273d505c8",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T12:00:59Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.5333,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "d65f151f-e97a-435e-9e9e-799f4c1d8767",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:54:23Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.3333,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "df94a57f-bc00-4722-8346-4c8f011452b2",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T12:02:12Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.325,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "769fac8a-846a-4c2e-9406-4c3f3c9245d2",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:58:20Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.6083,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "99616115-5b80-40de-9b20-2eedbcae3991",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-14T13:16:45Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.575,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "party_id": "BLK",
+            "id": "d2b84806-5988-4e16-a44b-d7b64fa93a27",
+            "currency": "GBP",
+            "tariff_alt_url": null,
+            "tariff_alt_text": null,
+            "last_updated": "2025-08-15T11:52:28Z",
+            "country_code": "GB",
+            "elements": [
+                {
+                    "restrictions": null,
+                    "price_components": [
+                        {
+                            "type": "FLAT",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "ENERGY",
+                            "price": 0.2833,
+                            "vat": null,
+                            "step_size": 1
+                        },
+                        {
+                            "type": "PARKING_TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        },
+                        {
+                            "type": "TIME",
+                            "price": 0,
+                            "vat": null,
+                            "step_size": 60
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
