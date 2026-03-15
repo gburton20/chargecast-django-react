@@ -1,0 +1,78 @@
+{
+    "data": [
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "fd80692e-6fe0-42de-9f5f-88a292df9d42",
+            "currency": "GBP",
+            "elements": [
+                {
+                    "price_components": [
+                        {
+                            "type": "ENERGY",
+                            "price": 0.325,
+                            "step_size": 1
+                        }
+                    ],
+                    "restrictions": {
+                        "start_time": "00:00",
+                        "end_time": "07:00"
+                    }
+                },
+                {
+                    "price_components": [
+                        {
+                            "type": "ENERGY",
+                            "price": 0.4917,
+                            "step_size": 1
+                        }
+                    ],
+                    "restrictions": {
+                        "start_time": "07:00",
+                        "end_time": "00:00"
+                    }
+                }
+            ],
+            "last_updated": "2025-10-02T13:36:00Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "a38338f7-96fa-4c71-8b61-f1a8f5f179b2",
+            "currency": "EUR",
+            "elements": [
+                {
+                    "price_components": [
+                        {
+                            "type": "ENERGY",
+                            "price": 0.5505,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ],
+            "last_updated": "2025-10-03T14:52:11Z"
+        },
+        {
+            "country_code": "GB",
+            "party_id": "CGY",
+            "id": "f61692a5-b7af-48cc-b6e5-f63ff3e2a801",
+            "currency": "USD",
+            "elements": [
+                {
+                    "price_components": [
+                        {
+                            "type": "ENERGY",
+                            "price": 0.4167,
+                            "step_size": 1
+                        }
+                    ]
+                }
+            ],
+            "last_updated": "2025-10-14T09:59:55Z"
+        }
+    ],
+    "status_code": 1000,
+    "status_message": "Success",
+    "timestamp": "2026-03-15T14:27:21Z"
+}
